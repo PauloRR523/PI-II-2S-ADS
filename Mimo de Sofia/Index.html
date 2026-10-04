@@ -18,20 +18,44 @@
 
             <nav class="main-nav" aria-label="Navegação principal">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#produtos">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre mim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contatos</a>
-                    </li>
-                </ul>
-            </nav>
+
+             <li class="nav-item">
+             <a class="nav-link" href="#inicio">Início</a>
+             </li>
+
+             <li class="nav-item-dropdown">
+
+             <a class="nav-link" href="#produtos">Produtos</a>
+
+             <ul class="produto-dropdown">
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-1"">Infantil</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-2">Categoria 2</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-3">Categoria 3</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-4">Categoria 4</a>
+             </li>
+
+             </ul>
+
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre mim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contato">Contatos</a>
+            </li>
+        </ul>
+        </nav>
 
         </div>
     </header>
@@ -87,6 +111,16 @@
             </div>
         </section>
 
+        <!--Pra que abra um dropdown com hover, no CSS pode ser algo como:
+
+           .nav-item-dropdown .produto-dropdown {
+            display: none;
+           }
+
+           .nav-item-dropdown:hover .produto-dropdown {
+           display: block;
+           }
+        -->
 
         <section class="produtos-section" id="produtos">
             <div class="section-container">
@@ -107,7 +141,7 @@
                             <img src="assets/categoria-1.jpg" alt="Imagem para Infantil">
                         </figure>
 
-                        <div class="produto-card-content">
+                        <div class="produto-card-content-1" id="categoria-1">
                             <h3 class="produto-card-title">Infantil</h3>
 
                             <p class="produto-card-descricao">
@@ -123,7 +157,7 @@
 
                     <article class="produto-card-image-direita">
 
-                        <div class="produto-card-content">
+                        <div class="produto-card-content-2" id="categoria-2">
                             <h3 class="produto-card-title">Categoria 2</h3>
 
                             <p class="produto-card-descricao">
@@ -147,7 +181,7 @@
                             <img src="assets/categoria-3.jpg" alt="Imagem para categoria 3">
                         </figure>
 
-                        <div class="produto-card-content">
+                        <div class="produto-card-content" id="categoria-3">
                             <h3 class="produto-card-title">Categoria 3</h3>
 
                             <p class="produto-card-descricao">
@@ -164,7 +198,7 @@
 
                     <article class="produto-card-image-direita">
 
-                        <div class="produto-card-content">
+                        <div class="produto-card-content" id="categoria-4">
                             <h3 class="produto-card-title">Categoria 4</h3>
 
                             <p class="produto-card-descricao">
@@ -174,7 +208,7 @@
                             </p>
 
                             <figure>
-                                <img src="assets/categoria-2.jpg" alt="Imagem para categoria 2">
+                                <img src="assets/categoria-4.jpg" alt="Imagem para categoria 4">
                             </figure>
 
                             <a class="button-mais" href="#contato">Mais Produtos</a>
