@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria Cozinha</title>
+</head>
+<body>
+ <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 120px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 1px solid #e5e7eb;
+      padding: 8px 0;
+      z-index: 10;
+    }
+
+    .dropdown-content li {
+      display: block;
+    }
+
+    .dropdown-content a {
+      padding: 6px 12px;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .container-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px;
+      width: 280px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .secao-orcamento {
+      text-align: center;
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 30px 20px;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-orcamento {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .form-grupo {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-grupo textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <img src="https://via.placeholder.com/100x50" alt="Logo do Ateliê">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li class="dropdown">
+          <span>Produtos</span>
+          <ul class="dropdown-content">
+            <li><a href="#cozinha">Cozinha</a></li>
+            <li><a href="#banheiro">Banheiro</a></li>
+            <li><a href="#infantil">Infantil</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Sobre mim</a></li>
+        <li><a href="#">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+    <div>
+      <button type="button" onclick="history.back()">
+        &larr; Voltar
+      </button>
+    </div>
+
+    <section id="cozinha">
+      <h1>COZINHA</h1>
+
+      
+      <p>
+        Transforme o coração da sua casa num espaço ainda mais acolhedor, charmoso e funcional. Nossas peças de costura criativa para a cozinha são feitas à mão, combinando tecidos de alta qualidade, estampas exclusivas e acabamentos caprichados para trazer cor, praticidade e carinho às suas refeições e à rotina do seu dia a dia.
+      </p>
+    </section>
+
+    <section class="container-cards">
+      
+      <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Puxa Saco Artesanal">
+        <h3>Puxa Saco Artesanal</h3>
+        <p>Confeccionado em tecido 100% algodão com estampas exclusivas e ótimo acabamento para organizar a sua cozinha com charme.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Jogo Americano Dupla Face">
+        <h3>Jogo Americano Dupla Face</h3>
+        <p>Conjunto estruturado e lavável para proteger a sua mesa e deixar os momentos em família ainda mais especiais.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/250x200" alt="Caminho de Mesa Bordado">
+        <h3>Caminho de Mesa Bordado</h3>
+        <p>Trilho de mesa artesanal em tricoline com detalhes em patchwork e acabamento rendado para decorar o seu ambiente.</p>
+      </div>
+
+    </section>
+
+    <hr>
+
+    <section class="secao-orcamento">
+      <h2>Fazer Orçamento</h2>
+      <p>Monte a sua ideia de encomenda preenchendo os campos abaixo:</p>
+      
+      <form class="form-orcamento" onsubmit="event.preventDefault();">
+        <div class="form-grupo">
+          <label for="nome">Seu Nome</label>
+          <input type="text" id="nome" placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="form-grupo">
+          <label for="categoria-preferida">Categoria Preferida</label>
+          <select id="categoria-preferida">
+            <option value="cozinha">Cozinha</option>
+            <option value="banheiro">Banheiro</option>
+            <option value="infantil">Infantil</option>
+          </select>
+        </div>
+
+        <div class="form-grupo">
+          <label for="ideia">Monte sua ideia de encomenda</label>
+          <textarea id="ideia" placeholder="Descreva como você deseja sua peça (cores, estampas, detalhes...)"></textarea>
+        </div>
+
+        <button type="submit">
+          Quero fazer um orçamento &rarr;
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <hr>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Sobre mim</a></li>
+        <li><a href="#">Contatos</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+</html>
