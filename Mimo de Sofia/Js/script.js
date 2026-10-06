@@ -15,8 +15,6 @@ function mostrarImagem() {
     imagemHero.src = "images/hero-" + imagemAtual + ".jpg";
 }
 
-
-// Passa para a próxima imagem.
 function proximaImagem() {
     imagemAtual++;
 
@@ -27,8 +25,6 @@ function proximaImagem() {
     mostrarImagem();
 }
 
-
-// Volta para a imagem anterior.
 function imagemAnterior() {
     imagemAtual--;
 
@@ -39,12 +35,6 @@ function imagemAnterior() {
     mostrarImagem();
 }
 
-
-// Quando o botão direito for clicado,
-// executa a função proximaImagem().
 botaoProximo.addEventListener("click", proximaImagem);
 
-
-// Quando o botão esquerdo for clicado,
-// executa a função imagemAnterior().
 botaoAnterior.addEventListener("click", imagemAnterior);
