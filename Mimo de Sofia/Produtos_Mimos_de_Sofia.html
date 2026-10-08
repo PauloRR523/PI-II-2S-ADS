@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\style.css">
     <title>Categoria Cozinha</title>
 </head>
 <body>
@@ -10,27 +11,56 @@
 </head>
 <body>
 
-  <header>
-    <div>
-      <img src="https://via.placeholder.com/100x50" alt="Logo do Ateliê">
-    </div>
+  <header class="site-header">
+        <div class="header-container">
 
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li class="dropdown">
-          <span>Produtos</span>
-          <ul class="dropdown-content">
-            <li><a href="#cozinha">Cozinha</a></li>
-            <li><a href="#banheiro">Banheiro</a></li>
-            <li><a href="#infantil">Infantil</a></li>
-          </ul>
+            <a class="site-logo" href="#inicio" aria-label="Voltar para o início">
+                <img src="assets/logo.png" alt="Logo">
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul class="nav-list">
+
+             <li class="nav-item">
+             <a class="nav-link" href="#inicio">Início</a>
+             </li>
+
+             <li class="nav-item-dropdown">
+
+             <a class="nav-link" href="#produtos">Produtos</a>
+
+             <ul class="produto-dropdown">
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-1">Infantil</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-2">Categoria 2</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-3">Categoria 3</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#categoria-4">Categoria 4</a>
+             </li>
+
+             </ul>
+
         </li>
-        <li><a href="#">Sobre mim</a></li>
-        <li><a href="#">Contatos</a></li>
-      </ul>
-    </nav>
-  </header>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre mim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contato">Contatos</a>
+            </li>
+        </ul>
+        </nav>
+
+        </div>
+    </header>
 
   <hr>
 
@@ -107,21 +137,29 @@
 
   <hr>
 
-  <footer>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Sobre mim</a></li>
-        <li><a href="#">Contatos</a></li>
-      </ul>
-    </nav>
+    <footer class="site-footer">
+        <div class="footer-container">
 
-    <div>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">WhatsApp</a>
-    </div>
-  </footer>
+            <a class="site-logo-footer" href="#inicio" aria-label="Voltar para o início">
+                <img src="assets/logo.png" alt="Logo">
+            </a>
+
+            <nav class="footer-nav" aria-label="Nav do Footer">
+                <ul class="footer-nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#contato">Contatos</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links" aria-label="Redes sociais">
+                <a class="social-link" href="#" aria-label="Instagram">Instagram</a>
+                <a class="social-link" href="#" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 </html>
