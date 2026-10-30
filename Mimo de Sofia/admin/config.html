@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações | Mimo de Sofia</title>
+</head>
+
+<body>
+
+    <header>
+
+        <a href="dashboard.html">
+            <img
+                src="../public/assets/images/logo.png"
+                alt="Logo Mimo de Sofia"
+            >
+        </a>
+
+        <h1>Configurações do Site</h1>
+
+        <nav>
+            <a href="dashboard.html">Painel</a>
+            <a href="produtos/listar.html">Produtos</a>
+            <a href="categorias/listar.html">Categorias</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Informações gerais</h2>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+
+                    <legend>Identificação do site</legend>
+
+                    <div>
+                        <label for="nome_site">Nome do site:</label>
+
+                        <input
+                            type="text"
+                            id="nome_site"
+                            name="nome_site"
+                            value="Mimo de Sofia"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="descricao_site">Descrição do site:</label>
+
+                        <textarea
+                            id="descricao_site"
+                            name="descricao_site"
+                            rows="4"
+                        >Ateliê artesanal Mimo de Sofia.</textarea>
+                    </div>
+
+                    <div>
+                        <label for="logo">Alterar logotipo:</label>
+
+                        <input
+                            type="file"
+                            id="logo"
+                            name="logo"
+                            accept="image/*"
+                        >
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Informações de contato</legend>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="contato@exemplo.com"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="telefone">Telefone:</label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="whatsapp">WhatsApp:</label>
+
+                        <input
+                            type="tel"
+                            id="whatsapp"
+                            name="whatsapp"
+                            placeholder="(00) 00000-0000"
+                        >
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Redes sociais</legend>
+
+                    <div>
+                        <label for="instagram">Instagram:</label>
+
+                        <input
+                            type="url"
+                            id="instagram"
+                            name="instagram"
+                            placeholder="https://www.instagram.com/"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="facebook">Facebook:</label>
+
+                        <input
+                            type="url"
+                            id="facebook"
+                            name="facebook"
+                            placeholder="https://www.facebook.com/"
+                        >
+                    </div>
+
+                </fieldset>
+
+                <div>
+                    <button type="submit">
+                        Salvar configurações
+                    </button>
+
+                    <a href="dashboard.html">Cancelar</a>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Painel Administrativo - Mimo de Sofia</p>
+    </footer>
+
+</body>
+</html>

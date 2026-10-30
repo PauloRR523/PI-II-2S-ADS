@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mimo de Sofia. Costura afetiva feita à mão, com peças personalizadas para transformar momentos em memórias.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mimo de Sofia</title>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a class="site-logo" href="#inicio" aria-label="Voltar para o início">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul class="nav-list">
+
+             <li class="nav-item">
+             <a class="nav-link" href="#inicio">Início</a>
+             </li>
+
+             <li class="nav-item-dropdown">
+
+             <a class="nav-link" href="#produtos">Produtos</a>
+
+             <ul class="produto-dropdown">
+
+             <li class="produto-dropdown-item">
+                 <a href="#cozinha">Cozinha</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#infantil">Infantil</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#dia">Dia a Dia</a>
+             </li>
+
+             <li class="produto-dropdown-item">
+                <a href="#brinquedos">Brinquedos Educacionais</a>
+             </li>
+
+             </ul>
+
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre mim</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#contato">Contatos</a>
+            </li>
+
+        </ul>
+        </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero-section" id="inicio">
+            <div class="hero-container">
+
+                <div class="hero-content">
+                    <p class="hero-subtitle">Costura que abraça a</p>
+
+                    <h1 class="hero-title">Alma</h1>
+
+                    <p class="hero-descricao">
+                        Criações únicas, feitas à mão com amor, dedicação e muito carinho
+                        para transformar momentos em memórias inesquecíveis.
+                    </p>
+
+                    <a class="button-encomenda" href="#contato">
+                        Faça sua encomenda
+                    </a>
+                </div>
+
+
+                <!-- CARROSSEL DE IMAGENS -->
+                <div class="hero-media">
+
+                    <button
+                        class="hero-control-anterior"
+                        type="button"
+                        id="button-anterior"
+                        aria-label="Imagem anterior">
+                    </button>
+
+                    <figure class="hero-image">
+                        <img
+                            id="hero-image"
+                            src="assets/images/hero-1.jpg"
+                            alt="Carrossel de Imagens">
+                    </figure>
+
+                    <button
+                        class="hero-control-proxima"
+                        type="button"
+                        id="button-proxima"
+                        aria-label="Próxima imagem">
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--Pra que abra um dropdown com hover, no CSS pode ser algo como:
+
+           .nav-item-dropdown .produto-dropdown {
+            display: none;
+           }
+
+           .nav-item-dropdown:hover .produto-dropdown {
+           display: block;
+           }
+        -->
+
+        <section class="produtos-section" id="produtos">
+            <div class="section-container">
+
+                <header class="section-header">
+                    <h2 class="section-title">Produtos</h2>
+
+                    <p class="section-descricao">
+                        Cada retalho conta uma história. Descubra produtos artesanais únicos
+                        ou entre em contato para personalizar uma peça com suas cores e o seu estilo.
+                    </p>
+                </header>
+
+                <div class="produtos-lista">
+
+                    <article class="produto-card-image-esquerda">
+                        <figure>
+                            <img src="assets/images/categoria-1.jpg" alt="Imagem para Cozinha">
+                        </figure>
+
+                        <div class="produto-card-content-1" id="cozinha">
+                            <h3 class="produto-card-title">Cozinha</h3>
+
+                            <p class="produto-card-descricao">
+                                Lorem ipsum dolor sit amet consectetur.
+                                adipisicing elit. Esse, recusandae optio laboriosam,
+                                voluptatum nam, excepturi quae est cum ducimus eos soluta.
+                                blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
+                            </p>
+
+                            <a class="button-mais" href="cozinha.html">Mais Produtos</a>
+                        </div>
+                    </article>
+
+
+                    <article class="produto-card-image-direita">
+
+                        <div class="produto-card-content-2" id="infantil">
+                            <h3 class="produto-card-title">Infantil</h3>
+
+                            <p class="produto-card-descricao">
+                                Lorem ipsum dolor sit amet consectetur.
+                                adipisicing elit. Esse, recusandae optio laboriosam,
+                                voluptatum nam, excepturi quae est cum ducimus eos soluta.
+                                blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
+                            </p>
+
+                           <figure>
+                               <img src="assets/images/categoria-2.jpg" alt="Imagem para Infantil">
+                           </figure>
+
+                            <a class="button-mais" href="infantil.html">Mais Produtos</a>
+                        </div>
+                    </article>
+
+
+                    <article class="produto-card-image-esquerda">
+                        <figure>
+                            <img src="assets/images/categoria-3.jpg" alt="Imagem para dia-a-dia">
+                        </figure>
+
+                        <div class="produto-card-content" id="dia">
+                            <h3 class="produto-card-title">Dia a Dia</h3>
+
+                            <p class="produto-card-descricao">
+                                Lorem ipsum dolor sit amet consectetur.
+                                adipisicing elit. Esse, recusandae optio laboriosam,
+                                voluptatum nam, excepturi quae est cum ducimus eos soluta.
+                                blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
+                            </p>
+
+                            <a class="button-mais" href="dia-a-dia.html">Mais Produtos</a>
+                        </div>
+                    </article>
+
+
+                    <article class="produto-card-image-direita">
+
+                        <div class="produto-card-content" id="brinquedos">
+                            <h3 class="produto-card-title">Brinquedos Educacionais</h3>
+
+                            <p class="produto-card-descricao">
+                                Mimos artesanais e personalizados para bebês e crianças.
+                                Encontre toalhas bordadas com nomes, kits de higiene e peças
+                                de patchwork cheias de carinho.
+                            </p>
+
+                            <figure>
+                                <img src="assets/images/categoria-4.jpg" alt="Imagem para Brinquedos Educacionais">
+                            </figure>
+
+                            <a class="button-mais" href="brinquedos.html">Mais Produtos</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre-section" id="sobre">
+            <div class="section-container">
+
+                <div class="sobre-introduction">
+
+                    <figure class="sobre-image">
+                        <img src="assets/images/sobre.jpg" alt="Imagem para Sobre">
+                    </figure>
+
+                    <div class="sobre-content">
+                        <h2 class="sobre-title">Quem sou eu?</h2>
+
+                        <p class="sobre-description">
+                            Lorem ipsum dolor sit amet consectetur.
+                            adipisicing elit. Esse, recusandae optio laboriosam,
+                            voluptatum nam, excepturi quae est cum ducimus eos soluta.
+                            blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="sobre-historia">
+
+                    <header class="section-header">
+                        <h2 class="section-title">O que é a Costura Afetiva?</h2>
+                    </header>
+
+                    <p class="about-historia-text-1">
+                        No Ateliê Mimo de Sofia, acreditamos que cada pedacinho de tecido
+                        tem uma história para contar. A costura afetiva vai muito além de
+                        unir retalhos: é arte de materializar sentimentos em peças artesanais.
+                    </p>
+
+                    <p class="sobre-historia-text-2">
+                        Nossa especialidade é costurar carinho, presentes, personalidade,
+                        utilidade e memórias delicadas, criando peças únicas e cheias de significado.
+                    </p>
+                    
+                    <!-- HIGHLIGHTS AINDA PRECISAM SER EDITADOS/COSTUMIZADOS -->
+
+                    <ul class="sobre-highlights">
+                        <li class="sobre-highlight">
+                            Brinquedos de tecido afetivos, lúdicos e seguros.
+                        </li>
+                        <li class="sobre-highlight">
+                            Brinquedos pedagógicos como ferramenta para desenvolvimento infantil.
+                        </li>
+                        <li class="sobre-highlight">
+                            Bordados personalizados e costura criativa exclusiva.
+                        </li>
+                    </ul>
+
+                    <a class="button-contato" href="#contato">
+                        Quero encomendar minha peça
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="contato-section" id="contato">
+            <div class="section-container">
+
+                <header class="section-header">
+                    <h2 class="section-title">Vamos conversar?</h2>
+
+                    <p class="section-descricao">
+                        Transforme sua ideia em um lindo mimo de tecido.
+                    </p>
+                </header>
+
+
+                <form class="contato-form" action="#" method="post">
+
+                    <div class="form-campo">
+                        <label class="form-label" for="nome">Seu Nome</label>
+
+                        <input
+                            class="form-input"
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Como posso te chamar?"
+                            required>
+                    </div>
+
+
+                    <div class="form-campo">
+                        <label class="form-label" for="categoria">Categoria preferida</label>
+
+                        <input
+                            class="form-input"
+                            type="text"
+                            id="categoria"
+                            name="categoria"
+                            placeholder="Coloque aqui qual categoria você deseja">
+                    </div>
+
+
+                    <div class="form-campo">
+                        <label class="form-label" for="mensagem">Sua ideia para encomenda</label>
+
+                        <textarea
+                            class="form-textarea"
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Me conte um pouco sobre o que você deseja..."
+                            required></textarea>
+                    </div>
+
+
+                    <button class="button-submit" type="submit">
+                        Quero fazer um orçamento
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <a class="site-logo-footer" href="#inicio" aria-label="Voltar para o início">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+
+            <nav class="footer-nav" aria-label="Nav do Footer">
+                <ul class="footer-nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#contato">Contatos</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-links" aria-label="Redes sociais">
+                <a class="social-link" href="#" aria-label="Instagram">Instagram</a>
+                <a class="social-link" href="#" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
