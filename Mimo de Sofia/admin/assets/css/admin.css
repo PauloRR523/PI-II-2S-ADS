@@ -1,0 +1,19 @@
+:root{
+    --cor-primaria: #FFD2D3;
+    --cor-primaria-hover: #F4A7A8;
+    --cor-primaria-escuro: #C8898A;
+    --cor-branco: #FCFCFC;
+    --cor-preto: #101010;
+
+    border-radius: 15px;
+    
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
