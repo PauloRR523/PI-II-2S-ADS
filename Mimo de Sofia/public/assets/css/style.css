@@ -1,106 +1,815 @@
-:root{
-    --cor-primaria: #FFD2D3;
-    --cor-primaria-hover: #F4A7A8;
-    --cor-primaria-escuro: #C8898A;
-    --cor-branco: #FCFCFC;
-    --cor-preto: #101010;
-    --cor-cinza1: #312F2F;
-    --cor-cinza2: #A0A0A0;
-    --cor-cinza3: #C4C4C4;
-    --cor-cinza4: #DFDFDF;
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;500;600;700&display=swap");
 
-    border-radius: 15px;
-    
+/* --------------------------------------------------------------------------
+   1. Tokens
+   -------------------------------------------------------------------------- */
+:root {
+    /* Cores */
+    --rosa-50:  #FFF8F7;   /* fundo da página */
+    --rosa-100: #FFE6E5;   /* fundo de seção suave */
+    --rosa-200: #FFD1D4;   /* faixas e cartões rosa */
+    --rosa-400: #F4A6A6;   /* botão secundário */
+    --ponto:    #EFA5AD;   /* cor do ponto de costura */
+    --rosa-600: #C9677A;   /* palavra em script (texto grande) */
+    --vinho-500: #A24D5D;  /* títulos de seção */
+    --vinho-700: #7D3B4B;  /* botão principal, foco */
+    --vinho-900: #4B2430;  /* texto corrido */
+    --salvia:   #8FAE93;   /* detalhe: botão de costura nas listas */
+
+    /* Tipografia */
+    --fonte-texto: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --fonte-script: "Allura", "Brush Script MT", cursive;
+
+    /* Formas */
+    --folha: 28px 96px 28px 96px; 
+    --raio-card: 24px;
+
+    /* Layout */
+    --largura-site: 1160px;
+    --largura-conteudo: 1000px;
 }
 
-h1{
-    font-size: 48px;
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-h2{
-    font-size: 36px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
 }
 
-p{
-    font-size: 24px;
+body {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--vinho-900);
+    background-color: var(--rosa-50);
+    -webkit-font-smoothing: antialiased;
 }
 
-.header-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--cor-branco);
-    color: var(--cor-preto);
-    padding: 20px 40px;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-.main-nav, .nav-llist{
-    display: flex;
-    gap: 25px;
+figure,
+h1, h2, h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
     list-style: none;
-    font-size: large;
 }
 
-.produtos-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+:focus-visible {
+    outline: 3px solid var(--vinho-700);
+    outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Elementos compartilhados
+   -------------------------------------------------------------------------- */
+.section-container {
+    width: 100%;
+    max-width: var(--largura-conteudo);
+    margin-inline: auto;
+}
+
+.section-header {
     text-align: center;
-    background-color: var(--cor-primaria);
-    padding: 80px;
+    margin-bottom: 3rem;
 }
 
-.section-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.section-title {
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    font-weight: 700;
+    color: var(--vinho-500);
 }
 
-.section-header{
-    display: flex;
-    justify-content:space-between;
-    flex-direction: column;
-    align-items: center;
+.section-header::after {
+    content: "";
+    display: block;
+    width: 120px;
+    margin: 1.1rem auto 0;
+    border-top: 2px dashed var(--ponto);
 }
 
-.produto-card-image-esquerda{
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    text-align: left;
-    background-color: var(--cor-branco);
-    padding: 57px 46px;
-    border-radius: 15px;
+.section-descricao {
+    max-width: 56ch;
+    margin: 1rem auto 0;
+    font-size: 1.05rem;
 }
 
-.produto-card-content{
-    margin: 15px;
-}
-
-.produto-card-image-direita{
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-    text-align: right;
-    background-color: var(--cor-branco);
-    padding: 57px 46px;
-    border-radius: 15px;
-    gap: 25px;
-}
-
-.button-mais{
-    width: 233px;
-    height: 76px;
-    padding: 24px 48px;
-
-    background-color: var(--cor-primaria-hover);
-    border-radius: 15px;
+.button-encomenda,
+.button-contato,
+.button-submit {
+    display: inline-block;
+    padding: 0.95rem 1.9rem;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--vinho-700);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
     text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
 
-    color: var(--cor-preto);
-    font-size: 20px;
-    font: 600;
+.button-encomenda:hover,
+.button-contato:hover,
+.button-submit:hover {
+    background-color: var(--vinho-900);
+}
 
-    margin-top: 15px;
+.button-mais {
+    display: inline-block;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    background-color: var(--rosa-400);
+    color: var(--vinho-900);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-mais:hover {
+    background-color: var(--vinho-700);
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   4. Cabeçalho e navegação
+   -------------------------------------------------------------------------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 248, 247, 0.94);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px dashed var(--rosa-200);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: var(--largura-site);
+    margin-inline: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.site-logo img {
+    height: 64px;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item,
+.nav-item-dropdown {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.55rem 1.15rem;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--rosa-100);
+}
+
+.nav-link[aria-current="page"] {
+    background-color: var(--rosa-400);
+    font-weight: 600;
+}
+
+.produto-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 270px;
+    padding: 0.85rem;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(75, 36, 48, 0.14);
+    outline: 2px dashed var(--ponto);
+    outline-offset: -6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+
+.nav-item-dropdown:hover .produto-dropdown,
+.nav-item-dropdown:focus-within .produto-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.produto-dropdown-item a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.produto-dropdown-item a:hover {
+    background-color: var(--rosa-100);
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero
+   -------------------------------------------------------------------------- */
+.hero-section {
+    padding: 3.5rem 1.5rem 5rem;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    max-width: var(--largura-site);
+    margin-inline: auto;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--vinho-700);
+}
+
+.hero-title {
+    margin-top: -0.2rem;
+    font-family: var(--fonte-script);
+    font-size: clamp(4.5rem, 10vw, 7.5rem);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--rosa-600);
+}
+
+.hero-descricao {
+    max-width: 46ch;
+    margin: 0.75rem 0 2rem;
+    font-size: 1.1rem;
+}
+
+/* Carrossel */
+.hero-media {
+    position: relative;
+    isolation: isolate;
+    padding: 0 14px 14px 0;
+}
+
+.hero-image {
+    position: relative;
+    aspect-ratio: 5 / 4;
+    border-radius: var(--folha);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    background-color: var(--rosa-100);
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    z-index: -1;
+    border: 2px dashed var(--ponto);
+    border-radius: inherit;
+}
+
+.hero-control-anterior,
+.hero-control-proxima {
+    position: absolute;
+    top: calc(50% - 7px);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid var(--rosa-400);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--vinho-700);
+    cursor: pointer;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 14px rgba(75, 36, 48, 0.16);
+    transition: background-color 0.2s ease;
+}
+
+.hero-control-anterior:hover,
+.hero-control-proxima:hover {
+    background-color: var(--rosa-100);
+}
+
+.hero-control-anterior {
+    left: 0.75rem;
+}
+
+.hero-control-proxima {
+    right: calc(14px + 0.75rem);
+}
+
+/* Setas desenhadas em CSS (os botões estão vazios no HTML) */
+.hero-control-anterior::before,
+.hero-control-proxima::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+}
+
+.hero-control-anterior::before {
+    transform: rotate(45deg);
+    margin-left: 0.2rem;
+}
+
+.hero-control-proxima::before {
+    transform: rotate(-135deg);
+    margin-right: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. Produtos
+   -------------------------------------------------------------------------- */
+.produtos-section {
+    padding: 5rem 1.5rem;
+    background-color: var(--rosa-200);
+}
+
+.produtos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.produto-card-image-esquerda,
+.produto-card-image-direita {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.25rem 2.5rem;
+    background-color: var(--rosa-50);
+    border-radius: var(--raio-card);
+    /* ponto de costura por dentro do cartão */
+    outline: 2px dashed var(--ponto);
+    outline-offset: -12px;
+}
+
+.produto-card-image-esquerda figure,
+.produto-card-image-direita figure {
+    flex: none;
+    width: 190px;
+}
+
+.produto-card-image-esquerda img,
+.produto-card-image-direita img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: var(--folha);
+    background-color: var(--rosa-100);
+}
+
+.produto-card-content-1,
+.produto-card-content-2,
+.produto-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.produto-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--vinho-700);
+}
+
+.produto-card-descricao {
+    max-width: 52ch;
+    margin: 0.6rem 0 1.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Sobre
+   -------------------------------------------------------------------------- */
+.sobre-section {
+    padding: 5.5rem 1.5rem;
+}
+
+.sobre-introduction {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sobre-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--folha);
+    background-color: #E7DADB;
+    border: 2px solid var(--rosa-200);
+}
+
+.sobre-title {
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    font-weight: 700;
+    color: var(--vinho-700);
+}
+
+.sobre-description {
+    max-width: 55ch;
+    margin-top: 0.9rem;
+    font-size: 1.05rem;
+}
+
+.sobre-historia {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.about-historia-text-1,
+.sobre-historia-text-2 {
+    max-width: 62ch;
+    margin-inline: auto;
+    font-size: 1.05rem;
+}
+
+.about-historia-text-1 {
+    margin-bottom: 1rem;
+}
+
+.sobre-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2.5rem 0;
+    text-align: left;
+}
+
+.sobre-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    background-color: #fff;
+    border: 2px dashed var(--ponto);
+    border-radius: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Marcador em forma de botão de costura (dois furinhos) */
+.sobre-highlight::before {
+    content: "";
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 0.1rem;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 36% 50%, #fff 0 1.6px, transparent 2.2px),
+        radial-gradient(circle at 64% 50%, #fff 0 1.6px, transparent 2.2px),
+        var(--salvia);
+}
+
+/* --------------------------------------------------------------------------
+   8. Contato
+   -------------------------------------------------------------------------- */
+.contato-section {
+    padding: 2rem 1.5rem 5.5rem;
+}
+
+.contato-form {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 2.25rem;
+    background-color: var(--rosa-200);
+    border-radius: var(--raio-card);
+    outline: 2px dashed var(--ponto);
+    outline-offset: -12px;
+}
+
+.form-campo {
+    display: grid;
+    gap: 0.4rem;
+}
+
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--vinho-700);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background-color: var(--rosa-50);
+    color: var(--vinho-900);
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #8A6F75;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--vinho-700);
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Seta própria para o campo de categoria (select) */
+select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 2.75rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%237D3B4B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.button-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. Rodapé
+   -------------------------------------------------------------------------- */
+.site-footer {
+    padding: 2.5rem 1.5rem;
+    background-color: var(--rosa-200);
+    border-top: 2px dashed var(--ponto);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+    max-width: var(--largura-site);
+    margin-inline: auto;
+}
+
+.site-logo-footer img {
+    height: 72px;
+    width: auto;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+}
+
+.footer-nav-list a {
+    font-weight: 500;
+    color: var(--vinho-900);
+    text-decoration: none;
+}
+
+.footer-nav-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social-link {
+    padding: 0.5rem 1.1rem;
+    border: 2px solid var(--vinho-700);
+    border-radius: 999px;
+    color: var(--vinho-700);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: var(--vinho-700);
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   9b. Páginas de categoria (cozinha.html, infantil.html, ...)
+   -------------------------------------------------------------------------- */
+.categoria-section {
+    padding: 4.5rem 1.5rem 5.5rem;
+    background-color: var(--rosa-200);
+}
+
+.categoria-section .section-title {
+    color: var(--vinho-700);
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    max-width: var(--largura-conteudo);
+    margin-inline: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+    background-color: var(--rosa-50);
+    border-radius: var(--raio-card);
+    /* ponto de costura por dentro do cartão, igual aos cards da home */
+    outline: 2px dashed var(--ponto);
+    outline-offset: -10px;
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+    border-radius: var(--folha);
+    background-color: var(--rosa-100);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--vinho-700);
+}
+
+.card p {
+    flex: 1;
+    margin: 0.5rem 0 1.25rem;
+    font-size: 0.95rem;
+}
+
+.card .button-mais {
+    align-self: flex-start;
+}
+
+/* Formulário solto no <main>, sem seção ao redor */
+main > .contato-form {
+    width: min(560px, calc(100% - 3rem));
+    margin: 5rem auto 5.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Responsivo
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-media {
+        width: 100%;
+        max-width: 520px;
+        margin-inline: auto;
+    }
+
+    .sobre-introduction {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .sobre-image {
+        width: min(260px, 70%);
+    }
+
+    .sobre-description {
+        margin-inline: auto;
+    }
+
+    .sobre-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* No celular não há hover: o link "Produtos" leva à seção com as categorias */
+    .produto-dropdown {
+        display: none;
+    }
+
+    .produto-card-image-esquerda,
+    .produto-card-image-direita {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+        text-align: center;
+    }
+
+    .produto-card-image-direita figure {
+        order: -1;
+    }
+
+    .produto-card-descricao {
+        margin-inline: auto;
+    }
+
+    .contato-form {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav-list {
+        justify-content: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   11. Acessibilidade: respeitar quem reduz movimento
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
 }

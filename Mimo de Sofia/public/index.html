@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mimo de Sofia. Costura afetiva feita à mão, com peças personalizadas para transformar momentos em memórias.">
+
+    <!-- Fontes: Montserrat (textos) e Allura (palavra "Alma") -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mimo de Sofia</title>
 </head>
@@ -14,51 +20,52 @@
         <div class="header-container">
 
             <a class="site-logo" href="#inicio" aria-label="Voltar para o início">
-                <img src="assets/images/logo.png" alt="Logo">
+                <img src="assets/images/logo.png" alt="Ateliê Mimo de Sofia">
             </a>
 
             <nav class="main-nav" aria-label="Navegação principal">
                 <ul class="nav-list">
 
-             <li class="nav-item">
-             <a class="nav-link" href="#inicio">Início</a>
-             </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio" aria-current="page">Início</a>
+                    </li>
 
-             <li class="nav-item-dropdown">
+                    <li class="nav-item-dropdown">
 
-             <a class="nav-link" href="#produtos">Produtos</a>
+                        <a class="nav-link" href="#produtos">Produtos</a>
 
-             <ul class="produto-dropdown">
+                        <ul class="produto-dropdown">
 
-             <li class="produto-dropdown-item">
-                 <a href="#cozinha">Cozinha</a>
-             </li>
+                            <li class="produto-dropdown-item">
+                                <a href="#cozinha">Cozinha</a>
+                            </li>
 
-             <li class="produto-dropdown-item">
-                <a href="#infantil">Infantil</a>
-             </li>
+                            <li class="produto-dropdown-item">
+                                <a href="#infantil">Infantil</a>
+                            </li>
 
-             <li class="produto-dropdown-item">
-                <a href="#dia">Dia a Dia</a>
-             </li>
+                            <li class="produto-dropdown-item">
+                                <a href="#dia">Dia a Dia</a>
+                            </li>
 
-             <li class="produto-dropdown-item">
-                <a href="#brinquedos">Brinquedos Educacionais</a>
-             </li>
+                            <li class="produto-dropdown-item">
+                                <a href="#brinquedos">Brinquedos Educacionais</a>
+                            </li>
 
-             </ul>
+                        </ul>
 
-        </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sobre">Sobre mim</a>
-            </li>
+                    </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#contato">Contatos</a>
-            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre mim</a>
+                    </li>
 
-        </ul>
-        </nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contatos</a>
+                    </li>
+
+                </ul>
+            </nav>
 
         </div>
     </header>
@@ -99,7 +106,7 @@
                         <img
                             id="hero-image"
                             src="assets/images/hero-1.jpg"
-                            alt="Carrossel de Imagens">
+                            alt="Peças artesanais do Ateliê Mimo de Sofia">
                     </figure>
 
                     <button
@@ -114,16 +121,6 @@
             </div>
         </section>
 
-        <!--Pra que abra um dropdown com hover, no CSS pode ser algo como:
-
-           .nav-item-dropdown .produto-dropdown {
-            display: none;
-           }
-
-           .nav-item-dropdown:hover .produto-dropdown {
-           display: block;
-           }
-        -->
 
         <section class="produtos-section" id="produtos">
             <div class="section-container">
@@ -154,10 +151,9 @@
                                 blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
                             </p>
 
-                            <a class="button-mais" href="cozinha.html">Mais Produtos</a>
+                            <a class="button-mais" href="cozinha.html" aria-label="Mais produtos de Cozinha">Mais Produtos</a>
                         </div>
                     </article>
-                    <br>
 
                     <article class="produto-card-image-direita">
 
@@ -171,19 +167,17 @@
                                 blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
                             </p>
 
-                           <figure>
-                               <img src="assets/images/categoria-2.jpg" alt="Imagem para Infantil">
-                           </figure>
-
-                            <a class="button-mais" href="infantil.html">Mais Produtos</a>
+                            <a class="button-mais" href="infantil.html" aria-label="Mais produtos Infantil">Mais Produtos</a>
                         </div>
-                    </article>
 
-                    <br>
+                        <figure>
+                            <img src="assets/images/categoria-2.jpg" alt="Imagem para Infantil">
+                        </figure>
+                    </article>
 
                     <article class="produto-card-image-esquerda">
                         <figure>
-                            <img src="assets/images/categoria-3.jpg" alt="Imagem para dia-a-dia">
+                            <img src="assets/images/categoria-3.jpg" alt="Imagem para Dia a Dia">
                         </figure>
 
                         <div class="produto-card-content" id="dia">
@@ -196,11 +190,9 @@
                                 blanditiis itaque aliquam culpa officia aperiam rem praesentium. Veniam.
                             </p>
 
-                            <a class="button-mais" href="dia-a-dia.html">Mais Produtos</a>
+                            <a class="button-mais" href="dia-a-dia.html" aria-label="Mais produtos de Dia a Dia">Mais Produtos</a>
                         </div>
                     </article>
-
-                    <br>
 
                     <article class="produto-card-image-direita">
 
@@ -213,12 +205,12 @@
                                 de patchwork cheias de carinho.
                             </p>
 
-                            <figure>
-                                <img src="assets/images/categoria-4.jpg" alt="Imagem para Brinquedos Educacionais">
-                            </figure>
-
-                            <a class="button-mais" href="brinquedos.html">Mais Produtos</a>
+                            <a class="button-mais" href="brinquedos.html" aria-label="Mais produtos de Brinquedos Educacionais">Mais Produtos</a>
                         </div>
+
+                        <figure>
+                            <img src="assets/images/categoria-4.jpg" alt="Imagem para Brinquedos Educacionais">
+                        </figure>
                     </article>
 
                 </div>
@@ -231,7 +223,7 @@
                 <div class="sobre-introduction">
 
                     <figure class="sobre-image">
-                        <img src="assets/images/sobre.jpg" alt="Imagem para Sobre">
+                        <img src="assets/images/sobre.jpg" alt="Foto da artesã do Ateliê Mimo de Sofia">
                     </figure>
 
                     <div class="sobre-content">
@@ -264,7 +256,7 @@
                         Nossa especialidade é costurar carinho, presentes, personalidade,
                         utilidade e memórias delicadas, criando peças únicas e cheias de significado.
                     </p>
-                    
+
                     <!-- HIGHLIGHTS AINDA PRECISAM SER EDITADOS/COSTUMIZADOS -->
 
                     <ul class="sobre-highlights">
@@ -311,7 +303,22 @@
                             type="text"
                             id="nome"
                             name="nome"
+                            autocomplete="name"
                             placeholder="Como posso te chamar?"
+                            required>
+                    </div>
+
+
+                    <div class="form-campo">
+                        <label class="form-label" for="whatsapp">Seu WhatsApp</label>
+
+                        <input
+                            class="form-input"
+                            type="tel"
+                            id="whatsapp"
+                            name="whatsapp"
+                            autocomplete="tel"
+                            placeholder="(19) 90000-0000"
                             required>
                     </div>
 
@@ -319,12 +326,17 @@
                     <div class="form-campo">
                         <label class="form-label" for="categoria">Categoria preferida</label>
 
-                        <input
+                        <select
                             class="form-input"
-                            type="text"
                             id="categoria"
-                            name="categoria"
-                            placeholder="Coloque aqui qual categoria você deseja">
+                            name="categoria">
+                            <option value="" selected>Escolha uma categoria</option>
+                            <option value="cozinha">Cozinha</option>
+                            <option value="infantil">Infantil</option>
+                            <option value="dia-a-dia">Dia a Dia</option>
+                            <option value="brinquedos">Brinquedos Educacionais</option>
+                            <option value="outro">Outro / ainda não sei</option>
+                        </select>
                     </div>
 
 
@@ -357,7 +369,7 @@
         <div class="footer-container">
 
             <a class="site-logo-footer" href="#inicio" aria-label="Voltar para o início">
-                <img src="assets/images/logo.png" alt="Logo">
+                <img src="assets/images/logo.png" alt="Ateliê Mimo de Sofia">
             </a>
 
             <nav class="footer-nav" aria-label="Nav do Footer">

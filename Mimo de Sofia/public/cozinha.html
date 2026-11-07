@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,26 +7,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Cozinha | Mimo de Sofia</title>
 </head>
-
+ 
 <body>
-
+ 
     <header class="site-header">
         <div class="header-container">
-
+ 
             <a class="site-logo" href="index.html#inicio" aria-label="Voltar para o início">
                 <img src="assets/images/logo.png" alt="Mimo de Sofia">
             </a>
-
-            <nav class="main-nav" aria-label="Navegacao principal">
+ 
+            <nav class="main-nav" aria-label="Navegação principal">
                 <ul class="nav-list">
-
+ 
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#inicio">Início</a>
                     </li>
-
+ 
                     <li class="nav-item-dropdown">
-                        <a class="nav-link" href="index.html#produtos">Produtos</a>
-
+                        <a class="nav-link" href="index.html#produtos" aria-current="page">Produtos</a>
+ 
                         <ul class="produto-dropdown">
                             <li class="produto-dropdown-item">
                                 <a href="cozinha.html">Cozinha</a>
@@ -43,142 +42,161 @@
                             </li>
                         </ul>
                     </li>
-
+ 
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#sobre">Sobre mim</a>
                     </li>
-
+ 
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#contato">Contatos</a>
                     </li>
-
+ 
                 </ul>
             </nav>
-
+ 
         </div>
     </header>
-
+ 
     <main>
-
+ 
         <section class="categoria-section">
-
+ 
             <header class="section-header">
                 <h1 class="section-title">Cozinha</h1>
-
+ 
                 <p class="section-descricao">
                     Transforme o coração da sua casa em um espaço ainda mais
                     acolhedor, charmoso e funcional. Nossas peças são feitas
                     à mão, com cuidado e carinho em cada detalhe.
                 </p>
             </header>
-
+ 
             <div class="container-cards">
-
+ 
                 <article class="card">
                     <img src="assets/images/produto-1.jpg" alt="Nome do produto">
-
+ 
                     <h2>Produto-1</h2>
-
+ 
                     <p>
                         Lorem ipsum dolor sit amet consectetur.
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
-
+ 
                     <a href="#" class="button-mais">
                         Ver produto
                     </a>
                 </article>
-
+ 
                 <article class="card">
                     <img src="assets/images/produto-2.jpg" alt="Nome do produto">
-
+ 
                     <h2>Produto-2</h2>
-
+ 
                     <p>
                         Lorem ipsum dolor sit amet consectetur.
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
-
+ 
                     <a href="#" class="button-mais">
                         Ver produto
                     </a>
                 </article>
-
+ 
                 <article class="card">
                     <img src="assets/images/produto-3.jpg" alt="Nome do Produto">
-
+ 
                     <h2>Produto-3</h2>
-
+ 
                     <p>
                         Lorem ipsum dolor sit amet consectetur.
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
-
+ 
                     <a href="#" class="button-mais">
                         Ver produto
                     </a>
                 </article>
-
+ 
             </div>
-
+ 
         </section>
-
+ 
         <form class="contato-form" action="#" method="post">
-
-                    <div class="form-campo">
-                        <label class="form-label" for="nome">Seu Nome</label>
-
-                        <input
-                            class="form-input"
-                            type="text"
-                            id="nome"
-                            name="nome"
-                            placeholder="Como posso te chamar?"
-                            required>
-                    </div>
-
-
-                    <div class="form-campo">
-                        <label class="form-label" for="categoria">Categoria preferida</label>
-
-                        <input
-                            class="form-input"
-                            type="text"
-                            id="categoria"
-                            name="categoria"
-                            placeholder="Coloque aqui qual categoria você deseja">
-                    </div>
-
-
-                    <div class="form-campo">
-                        <label class="form-label" for="mensagem">Sua ideia para encomenda</label>
-
-                        <textarea
-                            class="form-textarea"
-                            id="mensagem"
-                            name="mensagem"
-                            rows="6"
-                            placeholder="Me conte um pouco sobre o que você deseja..."
-                            required>
-                        </textarea>
-                    </div>
-
-
-                    <button class="button-submit" type="submit">
-                        Quero fazer um orçamento
-                    </button>
-
-                </form>
-
+ 
+            <div class="form-campo">
+                <label class="form-label" for="nome">Seu Nome</label>
+ 
+                <input
+                    class="form-input"
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    autocomplete="name"
+                    placeholder="Como posso te chamar?"
+                    required>
+            </div>
+ 
+ 
+            <div class="form-campo">
+                <label class="form-label" for="whatsapp">Seu WhatsApp</label>
+ 
+                <input
+                    class="form-input"
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    autocomplete="tel"
+                    placeholder="(19) 90000-0000"
+                    required>
+            </div>
+ 
+ 
+            <div class="form-campo">
+                <label class="form-label" for="categoria">Categoria preferida</label>
+ 
+                <select
+                    class="form-input"
+                    id="categoria"
+                    name="categoria">
+                    <option value="">Escolha uma categoria</option>
+                    <option value="cozinha" selected>Cozinha</option>
+                    <option value="infantil">Infantil</option>
+                    <option value="dia-a-dia">Dia a Dia</option>
+                    <option value="brinquedos">Brinquedos Educacionais</option>
+                    <option value="outro">Outro / ainda não sei</option>
+                </select>
+            </div>
+ 
+ 
+            <div class="form-campo">
+                <label class="form-label" for="mensagem">Sua ideia para encomenda</label>
+ 
+                <textarea
+                    class="form-textarea"
+                    id="mensagem"
+                    name="mensagem"
+                    rows="6"
+                    placeholder="Me conte um pouco sobre o que você deseja..."
+                    required></textarea>
+            </div>
+ 
+ 
+            <button class="button-submit" type="submit">
+                Quero fazer um orçamento
+            </button>
+ 
+        </form>
+ 
     </main>
-
+ 
     <footer class="site-footer">
         <div class="footer-container">
-
+ 
             <a class="site-logo-footer" href="index.html#inicio" aria-label="Voltar para o início">
                 <img src="assets/images/logo.png" alt="Mimo de Sofia">
             </a>
-
+ 
             <nav class="footer-nav" aria-label="Navegação do rodapé">
                 <ul class="footer-nav-list">
                     <li><a href="index.html#inicio">Início</a></li>
@@ -187,15 +205,14 @@
                     <li><a href="index.html#contato">Contatos</a></li>
                 </ul>
             </nav>
-
+ 
             <div class="social-links" aria-label="Redes sociais">
                 <a class="social-link" href="#" aria-label="Instagram">Instagram</a>
                 <a class="social-link" href="#" aria-label="WhatsApp">WhatsApp</a>
             </div>
-
+ 
         </div>
     </footer>
-
+ 
 </body>
 </html>
-
