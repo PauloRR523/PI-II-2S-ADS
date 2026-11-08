@@ -1,37 +1,46 @@
 
-// Número da imagem que está sendo exibida.
-let imagemAtual = 1;
+// Lista com os caminhos das imagens.
+const imagens = [
+    "assets/images/cozinha/bolsa-marmita1.jpeg",
+    "assets/images/cozinha/bolsa-marmita2.jpeg",
+    "assets/images/cozinha/bolsa-marmita3.jpeg"
+];
 
-// Quantidade total de imagens do carrossel.
-const totalDeImagens = 3;
+// Número da imagem atual.
+let imagemAtual = 0;
 
-// Localiza os elementos do HTML.
+// Quantidade de imagens.
+const totalDeImagens = imagens.length;
+
+// Elementos HTML.
 const imagemHero = document.getElementById("hero-image");
 const botaoAnterior = document.getElementById("button-anterior");
 const botaoProximo = document.getElementById("button-proxima");
 
-// Altera a imagem exibida.
+// Mostra a imagem atual.
 function mostrarImagem() {
-    imagemHero.src = "assets/images/hero-" + imagemAtual + ".jpg";
+    imagemHero.src = imagens[imagemAtual];
 }
 
-// Passa para a próxima imagem.
+// Próxima imagem.
 function proximaImagem() {
+
     imagemAtual++;
 
-    if (imagemAtual > totalDeImagens) {
-        imagemAtual = 1;
+    if (imagemAtual >= totalDeImagens) {
+        imagemAtual = 0;
     }
 
     mostrarImagem();
 }
 
-// Volta para a imagem anterior.
+// Imagem anterior.
 function imagemAnterior() {
+
     imagemAtual--;
 
-    if (imagemAtual < 1) {
-        imagemAtual = totalDeImagens;
+    if (imagemAtual < 0) {
+        imagemAtual = totalDeImagens - 1;
     }
 
     mostrarImagem();
@@ -40,4 +49,3 @@ function imagemAnterior() {
 // Eventos dos botões.
 botaoProximo.addEventListener("click", proximaImagem);
 botaoAnterior.addEventListener("click", imagemAnterior);
-
