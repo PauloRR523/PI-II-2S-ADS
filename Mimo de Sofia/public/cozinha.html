@@ -73,10 +73,26 @@
  
             <div class="container-cards">
  
-                <article class="card">
-                    <img src="assets/images/produto-1.jpg" alt="Nome do produto">
+                <article class="card"
+                    data-fotos="assets/images/cozinha/jogo-de-cozinha1.jpeg, assets/images/cozinha/jogo-de-cozinha2.jpeg, assets/images/cozinha/jogo-de-cozinha3.jpeg">
+                    <img src="assets/images/cozinha/jogo-de-cozinha1.jpeg" alt="Jogo de Cozinha Completo">
  
-                    <h2>Produto-1</h2>
+                    <h2>Jogo de Cozinha (Completo)</h2>
+ 
+                    <p>
+                        Jogo de cozinha completo inclui 10 peças (jogo americano, porta-copo, bate-mão)
+                    </p>
+ 
+                    <a href="#" class="button-mais">
+                        Ver produto
+                    </a>
+                </article>
+ 
+                <article class="card"
+                    data-fotos="assets/images/cozinha/bolsa-marmita1.jpeg, assets/images/cozinha/bolsa-marmita2.jpeg, assets/images/cozinha/bolsa-marmita3.jpeg">
+                    <img src="assets/images/cozinha/bolsa-marmita1.jpeg" alt="Bolsa para Marmitas">
+ 
+                    <h2>Bolsa Marmita</h2>
  
                     <p>
                         Lorem ipsum dolor sit amet consectetur.
@@ -88,22 +104,8 @@
                     </a>
                 </article>
  
-                <article class="card">
-                    <img src="assets/images/produto-2.jpg" alt="Nome do produto">
- 
-                    <h2>Produto-2</h2>
- 
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur.
-                        Lorem ipsum dolor sit amet consectetur.
-                    </p>
- 
-                    <a href="#" class="button-mais">
-                        Ver produto
-                    </a>
-                </article>
- 
-                <article class="card">
+                <article class="card"
+                    data-fotos="assets/images/produto-3.jpg, assets/images/produto-3-2.jpg, assets/images/produto-3-3.jpg">
                     <img src="assets/images/produto-3.jpg" alt="Nome do Produto">
  
                     <h2>Produto-3</h2>
@@ -213,6 +215,42 @@
  
         </div>
     </footer>
+ 
+    <!-- MODAL DE PRODUTO (preenchido pelo assets/js/produtos.js) -->
+    <dialog class="modal-produto" id="modal-produto" aria-labelledby="modal-titulo">
+ 
+        <button class="modal-fechar" type="button" aria-label="Fechar"></button>
+ 
+        <div class="modal-conteudo">
+ 
+            <div class="modal-galeria">
+                <figure class="modal-imagem-principal">
+                    <img id="modal-imagem" src="" alt="">
+ 
+                    <button class="modal-anterior" type="button" aria-label="Foto anterior"></button>
+                    <button class="modal-proxima" type="button" aria-label="Próxima foto"></button>
+ 
+                    <span class="modal-contador" aria-live="polite"></span>
+                </figure>
+ 
+                <ul class="modal-miniaturas"></ul>
+            </div>
+ 
+            <div class="modal-info">
+                <h2 class="modal-titulo" id="modal-titulo"></h2>
+ 
+                <p class="modal-descricao"></p>
+ 
+                <button class="button-encomenda modal-encomendar" type="button">
+                    Quero encomendar
+                </button>
+            </div>
+ 
+        </div>
+ 
+    </dialog>
+ 
+    <script src="assets/js/produtos.js"></script>
  
 </body>
 </html>

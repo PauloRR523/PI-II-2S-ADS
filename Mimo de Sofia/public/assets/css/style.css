@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@400;500;600;700&display=swap");
-
+ 
 /* --------------------------------------------------------------------------
    1. Tokens
    -------------------------------------------------------------------------- */
@@ -15,20 +15,20 @@
     --vinho-700: #7D3B4B;  /* botão principal, foco */
     --vinho-900: #4B2430;  /* texto corrido */
     --salvia:   #8FAE93;   /* detalhe: botão de costura nas listas */
-
+ 
     /* Tipografia */
     --fonte-texto: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
     --fonte-script: "Allura", "Brush Script MT", cursive;
-
+ 
     /* Formas */
-    --folha: 28px 96px 28px 96px; 
+    --folha: 28px 96px 28px 96px;   /* cantos opostos arredondados */
     --raio-card: 24px;
-
+ 
     /* Layout */
     --largura-site: 1160px;
     --largura-conteudo: 1000px;
 }
-
+ 
 /* --------------------------------------------------------------------------
    2. Base
    -------------------------------------------------------------------------- */
@@ -37,12 +37,12 @@
 *::after {
     box-sizing: border-box;
 }
-
+ 
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
 }
-
+ 
 body {
     margin: 0;
     font-family: var(--fonte-texto);
@@ -52,37 +52,38 @@ body {
     background-color: var(--rosa-50);
     -webkit-font-smoothing: antialiased;
 }
-
+ 
 img {
     display: block;
     max-width: 100%;
 }
-
+ 
 figure,
 h1, h2, h3,
 p,
 ul {
     margin: 0;
 }
-
+ 
 ul {
     padding: 0;
     list-style: none;
 }
-
+ 
 a {
     color: inherit;
 }
-
+ 
 h1, h2, h3 {
     line-height: 1.2;
 }
-
+ 
+/* Foco visível para navegação por teclado */
 :focus-visible {
     outline: 3px solid var(--vinho-700);
     outline-offset: 3px;
 }
-
+ 
 /* --------------------------------------------------------------------------
    3. Elementos compartilhados
    -------------------------------------------------------------------------- */
@@ -91,18 +92,19 @@ h1, h2, h3 {
     max-width: var(--largura-conteudo);
     margin-inline: auto;
 }
-
+ 
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
 }
-
+ 
 .section-title {
     font-size: clamp(1.9rem, 3.6vw, 2.6rem);
     font-weight: 700;
     color: var(--vinho-500);
 }
-
+ 
+/* Linha de pesponto sob cada título de seção */
 .section-header::after {
     content: "";
     display: block;
@@ -110,13 +112,14 @@ h1, h2, h3 {
     margin: 1.1rem auto 0;
     border-top: 2px dashed var(--ponto);
 }
-
+ 
 .section-descricao {
     max-width: 56ch;
     margin: 1rem auto 0;
     font-size: 1.05rem;
 }
-
+ 
+/* Botões principais (ação de encomenda) */
 .button-encomenda,
 .button-contato,
 .button-submit {
@@ -135,13 +138,14 @@ h1, h2, h3 {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-
+ 
 .button-encomenda:hover,
 .button-contato:hover,
 .button-submit:hover {
     background-color: var(--vinho-900);
 }
-
+ 
+/* Botão secundário */
 .button-mais {
     display: inline-block;
     padding: 0.65rem 1.4rem;
@@ -154,12 +158,12 @@ h1, h2, h3 {
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 .button-mais:hover {
     background-color: var(--vinho-700);
     color: #fff;
 }
-
+ 
 /* --------------------------------------------------------------------------
    4. Cabeçalho e navegação
    -------------------------------------------------------------------------- */
@@ -172,7 +176,7 @@ h1, h2, h3 {
     backdrop-filter: blur(8px);
     border-bottom: 2px dashed var(--rosa-200);
 }
-
+ 
 .header-container {
     display: flex;
     align-items: center;
@@ -182,23 +186,23 @@ h1, h2, h3 {
     margin-inline: auto;
     padding: 0.75rem 1.5rem;
 }
-
+ 
 .site-logo img {
     height: 64px;
     width: auto;
 }
-
+ 
 .nav-list {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-
+ 
 .nav-item,
 .nav-item-dropdown {
     position: relative;
 }
-
+ 
 .nav-link {
     display: block;
     padding: 0.55rem 1.15rem;
@@ -207,16 +211,17 @@ h1, h2, h3 {
     text-decoration: none;
     transition: background-color 0.2s ease;
 }
-
+ 
 .nav-link:hover {
     background-color: var(--rosa-100);
 }
-
+ 
 .nav-link[aria-current="page"] {
     background-color: var(--rosa-400);
     font-weight: 600;
 }
-
+ 
+/* Dropdown de produtos (abre com hover e com foco do teclado) */
 .produto-dropdown {
     position: absolute;
     top: 100%;
@@ -233,32 +238,32 @@ h1, h2, h3 {
     transform: translateY(-4px);
     transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
 }
-
+ 
 .nav-item-dropdown:hover .produto-dropdown,
 .nav-item-dropdown:focus-within .produto-dropdown {
     opacity: 1;
     visibility: visible;
     transform: none;
 }
-
+ 
 .produto-dropdown-item a {
     display: block;
     padding: 0.6rem 1rem;
     border-radius: 12px;
     text-decoration: none;
 }
-
+ 
 .produto-dropdown-item a:hover {
     background-color: var(--rosa-100);
 }
-
+ 
 /* --------------------------------------------------------------------------
    5. Hero
    -------------------------------------------------------------------------- */
 .hero-section {
     padding: 3.5rem 1.5rem 5rem;
 }
-
+ 
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -267,14 +272,14 @@ h1, h2, h3 {
     max-width: var(--largura-site);
     margin-inline: auto;
 }
-
+ 
 .hero-subtitle {
     font-size: clamp(1.5rem, 3vw, 2.3rem);
     font-weight: 400;
     line-height: 1.2;
     color: var(--vinho-700);
 }
-
+ 
 .hero-title {
     margin-top: -0.2rem;
     font-family: var(--fonte-script);
@@ -283,26 +288,26 @@ h1, h2, h3 {
     line-height: 1;
     color: var(--rosa-600);
 }
-
+ 
 .hero-descricao {
     max-width: 46ch;
     margin: 0.75rem 0 2rem;
     font-size: 1.1rem;
 }
-
+ 
 /* Carrossel */
 .hero-media {
     position: relative;
     isolation: isolate;
     padding: 0 14px 14px 0;
 }
-
+ 
 .hero-image {
     position: relative;
     aspect-ratio: 5 / 4;
     border-radius: var(--folha);
 }
-
+ 
 .hero-image img {
     width: 100%;
     height: 100%;
@@ -310,7 +315,8 @@ h1, h2, h3 {
     border-radius: inherit;
     background-color: var(--rosa-100);
 }
-
+ 
+/* Moldura tracejada deslocada, como um retalho costurado por trás da foto */
 .hero-image::after {
     content: "";
     position: absolute;
@@ -319,7 +325,7 @@ h1, h2, h3 {
     border: 2px dashed var(--ponto);
     border-radius: inherit;
 }
-
+ 
 .hero-control-anterior,
 .hero-control-proxima {
     position: absolute;
@@ -339,20 +345,20 @@ h1, h2, h3 {
     box-shadow: 0 4px 14px rgba(75, 36, 48, 0.16);
     transition: background-color 0.2s ease;
 }
-
+ 
 .hero-control-anterior:hover,
 .hero-control-proxima:hover {
     background-color: var(--rosa-100);
 }
-
+ 
 .hero-control-anterior {
     left: 0.75rem;
 }
-
+ 
 .hero-control-proxima {
     right: calc(14px + 0.75rem);
 }
-
+ 
 /* Setas desenhadas em CSS (os botões estão vazios no HTML) */
 .hero-control-anterior::before,
 .hero-control-proxima::before {
@@ -362,17 +368,17 @@ h1, h2, h3 {
     border-left: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
 }
-
+ 
 .hero-control-anterior::before {
     transform: rotate(45deg);
     margin-left: 0.2rem;
 }
-
+ 
 .hero-control-proxima::before {
     transform: rotate(-135deg);
     margin-right: 0.2rem;
 }
-
+ 
 /* --------------------------------------------------------------------------
    6. Produtos
    -------------------------------------------------------------------------- */
@@ -380,13 +386,13 @@ h1, h2, h3 {
     padding: 5rem 1.5rem;
     background-color: var(--rosa-200);
 }
-
+ 
 .produtos-lista {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
 }
-
+ 
 .produto-card-image-esquerda,
 .produto-card-image-direita {
     display: flex;
@@ -399,13 +405,13 @@ h1, h2, h3 {
     outline: 2px dashed var(--ponto);
     outline-offset: -12px;
 }
-
+ 
 .produto-card-image-esquerda figure,
 .produto-card-image-direita figure {
     flex: none;
     width: 190px;
 }
-
+ 
 .produto-card-image-esquerda img,
 .produto-card-image-direita img {
     width: 190px;
@@ -414,39 +420,39 @@ h1, h2, h3 {
     border-radius: var(--folha);
     background-color: var(--rosa-100);
 }
-
+ 
 .produto-card-content-1,
 .produto-card-content-2,
 .produto-card-content {
     flex: 1;
     min-width: 0;
 }
-
+ 
 .produto-card-title {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--vinho-700);
 }
-
+ 
 .produto-card-descricao {
     max-width: 52ch;
     margin: 0.6rem 0 1.4rem;
 }
-
+ 
 /* --------------------------------------------------------------------------
    7. Sobre
    -------------------------------------------------------------------------- */
 .sobre-section {
     padding: 5.5rem 1.5rem;
 }
-
+ 
 .sobre-introduction {
     display: grid;
     grid-template-columns: 280px 1fr;
     align-items: center;
     gap: 3rem;
 }
-
+ 
 .sobre-image img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -455,35 +461,35 @@ h1, h2, h3 {
     background-color: #E7DADB;
     border: 2px solid var(--rosa-200);
 }
-
+ 
 .sobre-title {
     font-size: clamp(1.7rem, 3vw, 2.1rem);
     font-weight: 700;
     color: var(--vinho-700);
 }
-
+ 
 .sobre-description {
     max-width: 55ch;
     margin-top: 0.9rem;
     font-size: 1.05rem;
 }
-
+ 
 .sobre-historia {
     margin-top: 6rem;
     text-align: center;
 }
-
+ 
 .about-historia-text-1,
 .sobre-historia-text-2 {
     max-width: 62ch;
     margin-inline: auto;
     font-size: 1.05rem;
 }
-
+ 
 .about-historia-text-1 {
     margin-bottom: 1rem;
 }
-
+ 
 .sobre-highlights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -491,7 +497,7 @@ h1, h2, h3 {
     margin: 2.5rem 0;
     text-align: left;
 }
-
+ 
 .sobre-highlight {
     display: flex;
     align-items: flex-start;
@@ -503,7 +509,7 @@ h1, h2, h3 {
     font-size: 0.95rem;
     line-height: 1.5;
 }
-
+ 
 /* Marcador em forma de botão de costura (dois furinhos) */
 .sobre-highlight::before {
     content: "";
@@ -517,14 +523,14 @@ h1, h2, h3 {
         radial-gradient(circle at 64% 50%, #fff 0 1.6px, transparent 2.2px),
         var(--salvia);
 }
-
+ 
 /* --------------------------------------------------------------------------
    8. Contato
    -------------------------------------------------------------------------- */
 .contato-section {
     padding: 2rem 1.5rem 5.5rem;
 }
-
+ 
 .contato-form {
     display: grid;
     gap: 1.25rem;
@@ -536,18 +542,18 @@ h1, h2, h3 {
     outline: 2px dashed var(--ponto);
     outline-offset: -12px;
 }
-
+ 
 .form-campo {
     display: grid;
     gap: 0.4rem;
 }
-
+ 
 .form-label {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--vinho-700);
 }
-
+ 
 .form-input,
 .form-textarea {
     width: 100%;
@@ -560,23 +566,23 @@ h1, h2, h3 {
     font-size: 1rem;
     line-height: 1.4;
 }
-
+ 
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: #8A6F75;
 }
-
+ 
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
     border-color: var(--vinho-700);
 }
-
+ 
 .form-textarea {
     min-height: 150px;
     resize: vertical;
 }
-
+ 
 /* Seta própria para o campo de categoria (select) */
 select.form-input {
     appearance: none;
@@ -587,13 +593,13 @@ select.form-input {
     background-repeat: no-repeat;
     background-position: right 1rem center;
 }
-
+ 
 .button-submit {
     width: 100%;
     margin-top: 0.5rem;
     padding: 1rem 1.5rem;
 }
-
+ 
 /* --------------------------------------------------------------------------
    9. Rodapé
    -------------------------------------------------------------------------- */
@@ -602,7 +608,7 @@ select.form-input {
     background-color: var(--rosa-200);
     border-top: 2px dashed var(--ponto);
 }
-
+ 
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -612,34 +618,34 @@ select.form-input {
     max-width: var(--largura-site);
     margin-inline: auto;
 }
-
+ 
 .site-logo-footer img {
     height: 72px;
     width: auto;
 }
-
+ 
 .footer-nav-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 2rem;
 }
-
+ 
 .footer-nav-list a {
     font-weight: 500;
     color: var(--vinho-900);
     text-decoration: none;
 }
-
+ 
 .footer-nav-list a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
-
+ 
 .social-links {
     display: flex;
     gap: 0.75rem;
 }
-
+ 
 .social-link {
     padding: 0.5rem 1.1rem;
     border: 2px solid var(--vinho-700);
@@ -651,12 +657,12 @@ select.form-input {
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 .social-link:hover {
     background-color: var(--vinho-700);
     color: #fff;
 }
-
+ 
 /* --------------------------------------------------------------------------
    9b. Páginas de categoria (cozinha.html, infantil.html, ...)
    -------------------------------------------------------------------------- */
@@ -664,11 +670,11 @@ select.form-input {
     padding: 4.5rem 1.5rem 5.5rem;
     background-color: var(--rosa-200);
 }
-
+ 
 .categoria-section .section-title {
     color: var(--vinho-700);
 }
-
+ 
 .container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -676,7 +682,7 @@ select.form-input {
     max-width: var(--largura-conteudo);
     margin-inline: auto;
 }
-
+ 
 .card {
     display: flex;
     flex-direction: column;
@@ -687,7 +693,7 @@ select.form-input {
     outline: 2px dashed var(--ponto);
     outline-offset: -10px;
 }
-
+ 
 .card img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -696,29 +702,285 @@ select.form-input {
     border-radius: var(--folha);
     background-color: var(--rosa-100);
 }
-
+ 
 .card h2 {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--vinho-700);
 }
-
+ 
 .card p {
     flex: 1;
     margin: 0.5rem 0 1.25rem;
     font-size: 0.95rem;
 }
-
+ 
 .card .button-mais {
     align-self: flex-start;
 }
-
+ 
 /* Formulário solto no <main>, sem seção ao redor */
 main > .contato-form {
     width: min(560px, calc(100% - 3rem));
     margin: 5rem auto 5.5rem;
 }
-
+ 
+/* --------------------------------------------------------------------------
+   9c. Modal de produto (galeria de fotos)
+   -------------------------------------------------------------------------- */
+html:has(.modal-produto[open]) {
+    overflow: hidden; /* trava a rolagem da página por trás do modal */
+}
+ 
+.modal-produto {
+    position: fixed;
+    width: min(960px, calc(100% - 2rem));
+    max-height: calc(100dvh - 2rem);
+    padding: 0;
+    border: 0;
+    border-radius: var(--raio-card);
+    background-color: var(--rosa-50);
+    color: var(--vinho-900);
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(75, 36, 48, 0.35);
+}
+ 
+.modal-produto::backdrop {
+    background-color: rgba(75, 36, 48, 0.6);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+ 
+.modal-produto[open] {
+    animation: modal-entrar 0.22s ease-out;
+}
+ 
+@keyframes modal-entrar {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+ 
+.modal-conteudo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 2rem;
+    max-height: calc(100dvh - 2rem);
+    padding: 2rem;
+    overflow-y: auto;
+    /* ponto de costura por dentro do modal */
+    outline: 2px dashed var(--ponto);
+    outline-offset: -12px;
+}
+ 
+/* Botão de fechar (X desenhado em CSS) */
+.modal-fechar {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid var(--rosa-400);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--vinho-700);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+ 
+.modal-fechar:hover {
+    background-color: var(--rosa-100);
+}
+ 
+.modal-fechar::before,
+.modal-fechar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+}
+ 
+.modal-fechar::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+ 
+.modal-fechar::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+ 
+/* Galeria */
+.modal-imagem-principal {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--folha);
+    overflow: hidden;
+    background-color: var(--rosa-100);
+}
+ 
+.modal-imagem-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+.modal-anterior,
+.modal-proxima {
+    position: absolute;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid var(--rosa-400);
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--vinho-700);
+    cursor: pointer;
+    transform: translateY(-50%);
+    box-shadow: 0 4px 14px rgba(75, 36, 48, 0.16);
+    transition: background-color 0.2s ease;
+}
+ 
+.modal-anterior:hover,
+.modal-proxima:hover {
+    background-color: var(--rosa-100);
+}
+ 
+.modal-anterior {
+    left: 0.75rem;
+}
+ 
+.modal-proxima {
+    right: 0.75rem;
+}
+ 
+.modal-anterior::before,
+.modal-proxima::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+}
+ 
+.modal-anterior::before {
+    transform: rotate(45deg);
+    margin-left: 0.2rem;
+}
+ 
+.modal-proxima::before {
+    transform: rotate(-135deg);
+    margin-right: 0.2rem;
+}
+ 
+.modal-contador {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(255, 248, 247, 0.92);
+    color: var(--vinho-900);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+ 
+.modal-miniaturas {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+    padding: 4px; /* espaço para o contorno de foco não ser cortado */
+    overflow-x: auto;
+}
+ 
+.modal-miniatura {
+    display: block;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background-color: var(--rosa-100);
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+ 
+.modal-miniatura:hover {
+    opacity: 1;
+}
+ 
+.modal-miniatura[aria-current="true"] {
+    border-color: var(--vinho-700);
+    opacity: 1;
+}
+ 
+.modal-miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+/* Produto com uma foto só: sem setas, contador nem miniaturas */
+.modal-unica .modal-anterior,
+.modal-unica .modal-proxima,
+.modal-unica .modal-contador,
+.modal-unica .modal-miniaturas {
+    display: none;
+}
+ 
+/* Informações do produto */
+.modal-info {
+    align-self: center;
+    padding-right: 1rem;
+}
+ 
+.modal-titulo {
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    font-weight: 700;
+    color: var(--vinho-700);
+}
+ 
+.modal-descricao {
+    margin: 1rem 0 1.75rem;
+}
+ 
+.card img {
+    cursor: zoom-in;
+}
+ 
+@media (max-width: 760px) {
+    .modal-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        padding: 3.75rem 1.5rem 2rem;
+    }
+ 
+    .modal-info {
+        padding-right: 0;
+    }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    .modal-produto[open] {
+        animation: none;
+    }
+}
+ 
 /* --------------------------------------------------------------------------
    10. Responsivo
    -------------------------------------------------------------------------- */
@@ -727,48 +989,48 @@ main > .contato-form {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-
+ 
     .hero-media {
         width: 100%;
         max-width: 520px;
         margin-inline: auto;
     }
-
+ 
     .sobre-introduction {
         grid-template-columns: 1fr;
         justify-items: center;
         text-align: center;
     }
-
+ 
     .sobre-image {
         width: min(260px, 70%);
     }
-
+ 
     .sobre-description {
         margin-inline: auto;
     }
-
+ 
     .sobre-highlights {
         grid-template-columns: 1fr;
     }
 }
-
+ 
 @media (max-width: 720px) {
     .header-container {
         flex-direction: column;
         gap: 0.4rem;
     }
-
+ 
     .nav-list {
         flex-wrap: wrap;
         justify-content: center;
     }
-
+ 
     /* No celular não há hover: o link "Produtos" leva à seção com as categorias */
     .produto-dropdown {
         display: none;
     }
-
+ 
     .produto-card-image-esquerda,
     .produto-card-image-direita {
         flex-direction: column;
@@ -776,29 +1038,29 @@ main > .contato-form {
         padding: 2rem 1.5rem;
         text-align: center;
     }
-
+ 
     .produto-card-image-direita figure {
         order: -1;
     }
-
+ 
     .produto-card-descricao {
         margin-inline: auto;
     }
-
+ 
     .contato-form {
         padding: 1.75rem 1.25rem;
     }
-
+ 
     .footer-container {
         flex-direction: column;
         text-align: center;
     }
-
+ 
     .footer-nav-list {
         justify-content: center;
     }
 }
-
+ 
 /* --------------------------------------------------------------------------
    11. Acessibilidade: respeitar quem reduz movimento
    -------------------------------------------------------------------------- */
@@ -806,10 +1068,11 @@ main > .contato-form {
     html {
         scroll-behavior: auto;
     }
-
+ 
     *,
     *::before,
     *::after {
         transition: none !important;
     }
 }
+ 
