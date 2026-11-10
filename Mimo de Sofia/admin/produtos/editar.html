@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\assets\css\admin.css">
     <title>Editar Produto | Mimo de Sofia</title>
 </head>
 
 <body>
-
-    <header>
+    <main class="config-container">
+    <section class="deco-card">
+    <header class="ad-header">
         <a href="../dashboard.html">
             <img src="../../public/assets/images/logo.png"
                  alt="Logo Mimo de Sofia">
@@ -17,21 +19,17 @@
 
         <h1>Editar Produto</h1>
 
-        <nav>
+        <nav class="config-nav">
             <a href="../dashboard.html">Painel</a>
             <a href="listar.html">Produtos</a>
         </nav>
     </header>
-
-    <main>
-
-        <section>
-
             <h2>Alterar informações do produto</h2>
+            <hr> <br>
 
             <form action="#" method="post" enctype="multipart/form-data">
 
-                <div>
+                <div class="admin-form-group deco-cardeditar">
                     <label for="nome">Nome do produto:</label>
                     <input
                         type="text"
@@ -40,9 +38,6 @@
                         value="Puxa Saco Artesanal"
                         required
                     >
-                </div>
-
-                <div>
                     <label for="categoria">Categoria:</label>
 
                     <select id="categoria" name="categoria" required>
@@ -53,9 +48,7 @@
                             Brinquedos Educacionais
                         </option>
                     </select>
-                </div>
 
-                <div>
                     <label for="descricao">Descrição:</label>
                     <textarea
                         id="descricao"
@@ -63,9 +56,6 @@
                         rows="5"
                         required
                     >Produto artesanal para cozinha.</textarea>
-                </div>
-
-                <div>
                     <label for="preco">Preço:</label>
                     <input
                         type="number"
@@ -77,9 +67,10 @@
                     >
                 </div>
 
+                <br>
                 <hr>
 
-                <section>
+                <section class="product-images deco-cardstat">
                     <h3>Imagem principal atual</h3>
 
                     <img
@@ -104,14 +95,14 @@
 
                 <hr>
 
-                <section>
+                <section class="product-images deco-cardstat">
                     <h3>Imagens adicionais atuais</h3>
 
                     <div>
                         <img
                             src="../../public/assets/images/produto-2.jpg"
                             alt="nome do produto"
-                            width="150"
+                            width="200"
                         >
 
                         <label>
@@ -128,7 +119,7 @@
                         <img
                             src="../../public/assets/images/produto-3.jpg"
                             alt="nome do produto"
-                            width="150"
+                            width="200"
                         >
 
                         <label>
@@ -158,30 +149,27 @@
 
                 <hr>
 
-                <div>
-                    <label for="status">Status do produto:</label>
+                <div class="admin-form-actions deco-cardstat">
+                    <label for="status">Status do Produto:</label>
 
                     <select id="status" name="status">
                         <option value="ativo" selected>Ativo</option>
                         <option value="inativo">Inativo</option>
                     </select>
+                    
                 </div>
-
+                <br>
+                <center>
                 <div>
-                    <button type="submit">Salvar alterações</button>
-                    <a href="listar.html">Cancelar</a>
+                    <button class="ad-button2" type="submit">Salvar alterações</button>
+                    <a class="ad-button3" href="listar.html">Cancelar</a>
                 </div>
-
+                </center>
             </form>
-
         </section>
-
     </main>
-
-    <footer>
+    <footer class="adfooter">
         <p>Painel Administrativo - Mimo de Sofia</p>
     </footer>
-
 </body>
 </html>
-```

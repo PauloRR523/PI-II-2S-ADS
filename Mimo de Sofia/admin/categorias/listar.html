@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\assets\css\admin.css">
     <title>Listar Categorias | Mimo de Sofia</title>
 </head>
 
-<body>
-
-    <header>
+<body class="admin-config">
+    <main class="config-container">
+    <section class="deco-cardlistar">
+    <header class="ad-header">
 
         <a href="../dashboard.html">
             <img
@@ -20,100 +21,89 @@
 
         <h1>Gerenciar Categorias</h1>
 
-        <nav>
+        <nav class="config-nav">
             <a href="../dashboard.html">Painel</a>
             <a href="../produtos/listar.html">Produtos</a>
             <a href="listar.html">Categorias</a>
         </nav>
-
     </header>
 
-    <main>
+        <h2>Categorias cadastradas</h2>
 
-        <section>
+        <p>
+        Nesta página você pode consultar e gerenciar
+        as categorias dos produtos.
+        </p>
 
-            <h2>Categorias cadastradas</h2>
+        <br>
+        <a href="cadastrar.html" class="ad-button">
+        Cadastrar nova categoria
+        </a>
 
-            <p>
-                Nesta página você pode consultar e gerenciar
-                as categorias dos produtos.
-            </p>
+        <table class="admin-table">
 
-            <a href="cadastrar.html">Cadastrar nova categoria</a>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome da categoria</th>
+                <th>Descrição</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
 
-            <table>
+        <tbody>
 
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome da categoria</th>
-                        <th>Descrição</th>
-                        <th>Status</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
+            <tr>
+                <td>1</td>
+                <td>Cozinha</td>
+                <td>Produtos artesanais para cozinha.</td>
+                <td>Ativa</td>
+                <td class="table-actions">
+                    <a href="editar.html" class="ad-button2">Editar</a>
+                    <a href="excluir.html" class="ad-button3">Excluir</a>
+                </td>
+            </tr>
 
-                <tbody>
+            <tr>
+                <td>2</td>
+                <td>Infantil</td>
+                <td>Produtos artesanais infantis.</td>
+                <td>Ativa</td>
+                <td class="table-actions">
+                    <a href="editar.html" class="ad-button2">Editar</a>
+                    <a href="excluir.html" class="ad-button3">Excluir</a>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>1</td>
-                        <td>Cozinha</td>
-                        <td>Produtos artesanais para cozinha.</td>
-                        <td>Ativa</td>
-                        <td>
-                            <a href="editar.html">Editar</a>
-                            |
-                            <a href="excluir.html">Excluir</a>
-                        </td>
-                    </tr>
+            <tr>
+                <td>3</td>
+                <td>Dia a Dia</td>
+                <td>Produtos artesanais para uso cotidiano.</td>
+                <td>Ativa</td>
+                <td class="table-actions">
+                    <a href="editar.html" class="ad-button2">Editar</a>
+                    <a href="excluir.html" class="ad-button3">Excluir</a>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Infantil</td>
-                        <td>Produtos artesanais infantis.</td>
-                        <td>Ativa</td>
-                        <td>
-                            <a href="editar.html">Editar</a>
-                            |
-                            <a href="excluir.html">Excluir</a>
-                        </td>
-                    </tr>
+            <tr>
+                <td>4</td>
+                <td>Brinquedos Educacionais</td>
+                <td>Brinquedos artesanais educativos.</td>
+                <td>Ativa</td>
+                <td class="table-actions">
+                    <a href="editar.html" class="ad-button2">Editar</a>
+                    <a href="excluir.html" class="ad-button3">Excluir</a>
+                </td>
+            </tr>
 
-                    <tr>
-                        <td>3</td>
-                        <td>Dia a Dia</td>
-                        <td>Produtos artesanais para uso cotidiano.</td>
-                        <td>Ativa</td>
-                        <td>
-                            <a href="editar.html">Editar</a>
-                            |
-                            <a href="excluir.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>Brinquedos Educacionais</td>
-                        <td>Brinquedos artesanais educativos.</td>
-                        <td>Ativa</td>
-                        <td>
-                            <a href="editar.html">Editar</a>
-                            |
-                            <a href="excluir.html">Excluir</a>
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
+        </tbody>
+        </table>
+      </section>
     </main>
-
-    <footer>
+    <footer class="adfooter">
         <p>Painel Administrativo - Mimo de Sofia</p>
     </footer>
-
 </body>
 </html>

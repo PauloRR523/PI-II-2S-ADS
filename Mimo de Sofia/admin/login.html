@@ -1,85 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/admin.css">
     <title>Acesso Administrativo | Mimo de Sofia</title>
 </head>
 
-<body>
-
-    <header>
-
-        <a href="../public/index.html">
-            <img
-                src="../public/assets/images/logo.png"
-                alt="Logo Mimo de Sofia"
-            >
-        </a>
-
-        <h1>Área Administrativa</h1>
-
-    </header>
-
-    <main>
-
-        <section>
-
-            <h2>Acesso do Administrador</h2>
-
-            <p>
-                Entre com seu usuário e senha para acessar
-                o painel administrativo.
-            </p>
-
-            <form action="#" method="post">
-
-                <div>
-                    <label for="usuario">Usuário:</label>
-
-                    <input
-                        type="text"
-                        id="usuario"
-                        name="usuario"
-                        placeholder="Digite seu usuário"
-                        autocomplete="username"
-                        required
+<body class="admin-config">
+    <main class="config-container">
+        <section class="deco-card">
+            <header class="ad-header">
+                <a href="../public/index.html">
+                    <img
+                        src="../public/assets/images/logo.png"
+                        alt="Logo Mimo de Sofia"
                     >
-                </div>
+                </a>
 
-                <div>
-                    <label for="senha">Senha:</label>
+                <h1>Área Administrativa</h1>
 
-                    <input
-                        type="password"
-                        id="senha"
-                        name="senha"
-                        placeholder="Digite sua senha"
-                        autocomplete="current-password"
-                        required
-                    >
-                </div>
+                <p>Mimo de Sofia</p>
 
-                <div>
-                    <button type="submit">
+            </header>
+
+            <div class="login-content">
+
+                <h2>Acesso Administrativo</h2>
+
+                <p>
+                    Entre com seu usuário e senha para acessar
+                    o painel administrativo.
+                </p>
+                <hr> <br>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="usuario">Usuário</label>
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Digite seu usuário"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="ad-button">
                         Entrar
                     </button>
-                </div>
-
-            </form>
-
-            <p>
-                <a href="../public/index.html">Voltar para o site</a>
-            </p>
-
+                </form>
+                <a
+                    href="../public/index.html"
+                    class="back-link"
+                >
+                    ← Voltar para o site
+                </a>
+            </div>
         </section>
-
     </main>
-
-    <footer>
+    <footer class="adfooter">
         <p>Mimo de Sofia - Área Administrativa</p>
     </footer>
-
 </body>
 </html>

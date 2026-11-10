@@ -1,128 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Painel administrativo Mimo de Sofia.">
+
+    <link rel="stylesheet" href="assets/css/admin.css">
 
     <title>Painel Adm | Mimo de Sofia</title>
 </head>
+<body class="admin-config">
+    <main class="config-container">
+        <section class="deco-card">
+            <header class="ad-header">
 
-<body>
+                <a href="dashboard.html">
+                    <img src="../public/assets/images/logo.png"
+                         alt="Mimo de Sofia">
+                </a>
 
-    <header class="admin-header">
+                <div class="ad-header">
+                    <h1>Painel Administrativo</h1>
+                    <p>Gerenciamento da loja</p>
+                </div>
+                <a href="login.html" class="dashboard-logout">
+                    Sair
+                </a>
 
-        <div class="admin-header-container">
+            </header>
 
-            <a href="dashboard.html" class="admin-logo">
-                <img src="../public/assets/images/logo.png" alt="Mimo de Sofia">
-            </a>
+            <section class="ad-title">
+                <h2>Bem-vinda ao painel administrativo!</h2>
 
-            <h1>Painel Administrativo</h1>
+                <p>
+                    Gerencie os produtos, categorias e informações
+                    do Ateliê Mimo de Sofia.
+                </p>
+                <hr>
+            </section>
 
-            <a href="login.html" class="admin-logout">
-                Sair
-            </a>
+            <section class="dashboard-menu">
 
-        </div>
+                <div class="dashboard-section-heading">
+                    <h2>Gerenciamento</h2>
+                    <p>Escolha o que deseja administrar.</p>
+                </div>
 
-    </header>
+                <div class="dashboard-menu-list">
+                    <article class="dashboard-menu-card">
 
+                        <h3>Produtos</h3>
 
-    <main class="admin-main">
+                        <p>
+                            Consulte, cadastre, edite e remova
+                            os produtos disponíveis no site.
+                        </p>
 
-        <section class="admin-intro">
+                        <div class="dashboard-card-actions">
+                            <a href="produtos/listar.html"
+                               class="dashboard-action-primary">
+                                Gerenciar produtos
+                            </a>
 
-            <h2>Bem-vinda ao painel administrativo</h2>
+                            <a href="produtos/cadastrar.html"
+                               class="dashboard-action-secondary">
+                                + Cadastrar produto
+                            </a>
+                        </div>
 
-            <p>
-                Gerencie os produtos, categorias e informações
-                do Ateliê Mimo de Sofia.
-            </p>
+                    </article>
 
+                    <article class="dashboard-menu-card">
+
+                        <h3>Categorias</h3>
+
+                        <p>
+                            Gerencie as categorias utilizadas
+                            para organizar os produtos.
+                        </p>
+
+                        <div class="dashboard-card-actions">
+                            <a href="categorias/listar.html"
+                               class="dashboard-action-primary">
+                                Gerenciar categorias
+                            </a>
+
+                            <a href="categorias/cadastrar.html"
+                               class="dashboard-action-secondary">
+                                + Cadastrar categoria
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <article class="dashboard-menu-card">
+
+                        <h3>Configurações</h3>
+
+                        <p>
+                            Gerencie as informações gerais
+                            do site e do ateliê.
+                        </p>
+
+                        <div class="dashboard-card-actions">
+                            <a href="config.html"
+                               class="dashboard-action-primary">
+                                Acessar configurações
+                            </a>
+                        </div>
+
+                    </article>
+                </div>
+            </section>
         </section>
-
-
-        <section class="admin-menu">
-
-            <h2>Gerenciamento</h2>
-
-            <div class="admin-menu-list">
-
-                <article class="admin-menu-card">
-
-                    <h3>Produtos</h3>
-
-                    <p>
-                        Consulte, cadastre, edite e remova
-                        os produtos disponíveis no site.
-                    </p>
-
-                    <a href="produtos/listar.html">
-                        Gerenciar produtos
-                    </a>
-
-                    <a href="produtos/cadastrar.html">
-                        Cadastrar produto
-                    </a>
-
-                </article>
-
-
-                <article class="admin-menu-card">
-
-                    <h3>Categorias</h3>
-
-                    <p>
-                        Gerencie as categorias utilizadas
-                        para organizar os produtos.
-                    </p>
-
-                    <a href="categorias/listar.html">
-                        Gerenciar categorias
-                    </a>
-
-                    <a href="categorias/cadastrar.html">
-                        Cadastrar categoria
-                    </a>
-
-                </article>
-
-
-                <article class="admin-menu-card">
-
-                    <h3>Configurações</h3>
-
-                    <p>
-                        Gerencie as informações gerais
-                        do site e do ateliê.
-                    </p>
-
-                    <a href="configuracoes.html">
-                        Acessar configurações
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
     </main>
-
-
-    <footer class="admin-footer">
-
-        <p>
-            Mimo de Sofia — Painel Administrativo
-        </p>
-
+    <footer class="adfooter">
+        <p>Mimo de Sofia — Painel Administrativo</p>
     </footer>
-
 </body>
-
 </html>
-

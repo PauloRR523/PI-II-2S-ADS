@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\assets\css\admin.css">
     <title>Excluir Produto | Mimo de Sofia</title>
 </head>
 
-<body>
-
-    <header>
+<body class="admin-config">
+    <main class="config-container">
+    <section class="deco-card">
+    <header class="ad-header">
         <a href="../dashboard.html">
             <img
                 src="../../public/assets/images/logo.png"
@@ -19,29 +21,23 @@
 
         <h1>Excluir Produto</h1>
 
-        <nav>
+        <nav class="config-nav">
             <a href="../dashboard.html">Painel</a>
             <a href="listar.html">Produtos</a>
         </nav>
     </header>
-
-    <main>
-
-        <section>
-
             <h2>Confirmar exclusão</h2>
 
             <p>
                 Você está prestes a excluir o seguinte produto:
             </p>
-
-            <div>
+            <br>
+            <div class="deco-cardexcluir">
                 <img
-                    src="../../public/assets/images/produto-1.jpg"
+                    src="../../public/assets/images/"
                     alt="nome do produto"
-                    width="200"
                 >
-
+                <hr>
                 <h3>Produto-1</h3>
 
                 <p>Categoria: Cozinha</p>
@@ -52,31 +48,27 @@
 
                 <p>Preço: R$ 00,00</p>
             </div>
-
+            <br> <hr>
             <p>
                 Tem certeza de que deseja excluir este produto?
             </p>
 
             <form action="#" method="post">
 
-                <button type="submit">
+                <button class="ad-button2" type="submit">
                     Sim, excluir produto
                 </button>
 
-                <a href="listar.html">
+                <a class="ad-button3" href="listar.html">
                     Não, voltar para a lista
                 </a>
 
             </form>
 
         </section>
-
     </main>
-
-    <footer>
+    <footer class="adfooter">
         <p>Painel Administrativo - Mimo de Sofia</p>
     </footer>
-
 </body>
 </html>
-```

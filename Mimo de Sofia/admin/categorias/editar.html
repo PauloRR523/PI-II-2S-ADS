@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\assets\css\admin.css">
     <title>Editar Categoria | Mimo de Sofia</title>
 </head>
 
 <body>
-
-    <header>
+    <main class="config-container">
+    <section class="deco-card">
+    <header class="ad-header">
 
         <a href="../dashboard.html">
             <img
@@ -20,21 +22,16 @@
 
         <h1>Editar Categoria</h1>
 
-        <nav>
+        <nav class="config-nav">
             <a href="../dashboard.html">Painel</a>
             <a href="listar.html">Categorias</a>
         </nav>
 
     </header>
-
-    <main>
-
-        <section>
-
-            <h2>Alterar informações da categoria</h2>
-
+            <h2>Alterar informações da Categoria</h2>
+            <hr> <br>
             <form action="#" method="post">
-
+            <div class="deco-cardeditar">
                 <div>
                     <label for="nome">Nome da categoria:</label>
 
@@ -49,7 +46,6 @@
 
                 <div>
                     <label for="descricao">Descrição:</label>
-
                     <textarea
                         id="descricao"
                         name="descricao"
@@ -59,30 +55,27 @@
 
                 <div>
                     <label for="status">Status:</label>
-
                     <select id="status" name="status" required>
                         <option value="ativo" selected>Ativa</option>
                         <option value="inativo">Inativa</option>
                     </select>
                 </div>
-
+            </div>
+                <br>
+                <center>
                 <div>
-                    <button type="submit">
+                    <button class="ad-button2" type="submit">
                         Salvar alterações
                     </button>
 
-                    <a href="listar.html">Cancelar</a>
+                    <a class="ad-button3" href="listar.html">Cancelar</a>
                 </div>
-
+                </center>
             </form>
-
         </section>
-
     </main>
-
-    <footer>
+    <footer class="adfooter">
         <p>Painel Administrativo - Mimo de Sofia</p>
     </footer>
-
 </body>
 </html>

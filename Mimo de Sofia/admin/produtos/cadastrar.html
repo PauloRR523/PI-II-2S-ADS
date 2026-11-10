@@ -5,36 +5,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="descricao" content="Cadastro de produtos do Mimo de Sofia.">
+    <link rel="stylesheet" href="..\assets\css\admin.css">
 
     <title>Cadastrar Produto | Mimo de Sofia</title>
 </head>
 
 <body>
-
-    <header class="admin-header">
-
-        <div class="admin-header-container">
-
+    <main class="config-container">
+    <section class="deco-card">
+    <header class="ad-header">
             <a href="../dashboard.html" class="admin-logo">
                 <img src="../../public/assets/images/logo.png" alt="Mimo de Sofia">
             </a>
 
             <h1>Cadastrar Produto</h1>
-
+            <nav class="config-nav">
             <a href="listar.html" class="admin-back">
                 Voltar para produtos
             </a>
-
-        </div>
-
+            </nav>
     </header>
-
-
-    <main class="admin-main">
-
-        <section class="admin-intro">
 
             <h2>Novo produto</h2>
 
@@ -42,15 +33,13 @@
                 Preencha as informações abaixo para adicionar
                 um produto ao catálogo do Mimo de Sofia.
             </p>
-
-        </section>
-
+            <hr> <br>
 
         <section class="admin-form-section">
 
             <form class="admin-form" action="#" method="post" enctype="multipart/form-data">
 
-                <div class="form-group">
+                <div class="admin-form-group deco-cardeditar">
 
                     <label for="nome">Nome do produto</label>
 
@@ -60,14 +49,7 @@
                         name="nome"
                         placeholder="Digite o nome do produto"
                         required>
-
-                </div>
-
-
-                <div class="form-group">
-
                     <label for="categoria">Categoria</label>
-
                     <select id="categoria" name="categoria" required>
 
                         <option value="">Selecione uma categoria</option>
@@ -83,28 +65,14 @@
                         </option>
 
                     </select>
-
-                </div>
-
-
-                <div class="form-group">
-
                     <label for="descricao">Descrição do produto</label>
-
                     <textarea
                         id="descricao"
                         name="descricao"
                         rows="6"
                         placeholder="Descreva as características do produto"
                         required></textarea>
-
-                </div>
-
-
-                <div class="form-group">
-
                     <label for="preco">Preço</label>
-
                     <input
                         type="number"
                         id="preco"
@@ -112,14 +80,10 @@
                         min="0"
                         step="0.01"
                         placeholder="0,00">
-
                 </div>
-
-
+                <section class="product-images deco-cardstat">
                 <div class="form-group">
-
                     <label for="imagem-principal">Imagem principal</label>
-
                     <input
                         type="file"
                         id="imagem-principal"
@@ -128,69 +92,47 @@
                         required>
 
                 </div>
+                </section>
 
-
+                <section class="product-images deco-cardstat">
                 <div class="form-group">
-
                     <label for="imagens-adicionais">Imagens adicionais</label>
-
                     <input
                         type="file"
                         id="imagens-adicionais"
                         name="imagens_adicionais[]"
                         accept="image/*"
                         multiple>
-
                     <small>
                         Você pode selecionar mais de uma imagem.
                     </small>
-
                 </div>
-
-
-                <div class="form-group">
-
+                </section>
+                <div class="admin-form-actions deco-cardstat">
                     <label for="status">Status do produto</label>
-
                     <select id="status" name="status" required>
-
                         <option value="ativo">Ativo</option>
-
                         <option value="inativo">Inativo</option>
-
                     </select>
-
                 </div>
-
-
+                
+                <center>
                 <div class="form-actions">
-
-                    <button type="submit">
+                    <button class="ad-button2" type="submit">
                         Cadastrar produto
                     </button>
-
-                    <a href="listar.html">
+                    <a class="ad-button3" href="listar.html">
                         Cancelar
                     </a>
-
                 </div>
-
+                </center>
             </form>
-
         </section>
-
     </main>
-
-
-    <footer class="admin-footer">
-
+    <footer class="adfooter">
         <p>
             Mimo de Sofia — Painel Administrativo
         </p>
-
     </footer>
-
 </body>
-
 </html>
-
