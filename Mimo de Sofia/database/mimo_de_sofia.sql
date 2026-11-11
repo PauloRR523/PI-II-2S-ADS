@@ -57,10 +57,10 @@ INSERT INTO `configuracoes` (
     'Mimo de Sofia',
     'Produtos artesanais feitos com carinho.',
     NULL,
-    'assets/uploads/logos/5bae32f8d6ec78d2230cd1e3bcde4e52.jpg',
+    'assets/uploads/logos/logo.jpg',
     'teste@email.com',
-    '1900000000',
-    '19 1900000000',
+    '19 00000000',
+    '19 00000000',
     'https://www.instagram.com/teste',
     'https://www.facebook.com/teste'
 );
