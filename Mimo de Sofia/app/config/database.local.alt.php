@@ -3,7 +3,7 @@
 /*
 INSTRUÇÕES:
 1. Renomeie esse arquivo para database.local.php.
-2. Preencha suas credenciais locais do seu banco de dados local.
+2. Preencha suas credenciais locais do seu banco de dados.
 3. Não envie database.local.php ao GitHub.
 */
 
