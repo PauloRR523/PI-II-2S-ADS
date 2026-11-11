@@ -1,15 +1,11 @@
-
-# Configurações e credenciais locais
 app/config/database.local.php
 .env
 .env.*
 
-# Arquivos temporários
 *.log
 *.tmp
 .DS_Store
 Thumbs.db
 
-# Editores
 .vscode/
 .idea/
