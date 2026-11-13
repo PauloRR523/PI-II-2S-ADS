@@ -135,16 +135,7 @@ INSERT INTO `usuarios` (
     `senha`,
     `status`,
     `ultimo_acesso`,
-    `data_criacao`
 ) VALUES (
-    1,
-    'Admin',
-    'user',
-    '$2y$10$o.G/TZ.YvAh8C20Hoj/r/uBd4w/qC3aRaJDuxZU/jTntvJRvxgKgC',
-    'ativo',
-    '2026-11-11 15:05:28',
-    '2026-11-08 23:59:36'
-);
 
 SET FOREIGN_KEY_CHECKS = 1;
 
