@@ -1,12 +1,20 @@
+======================= DIÁRIO DE BORDO ============================================================================
+
 01/09 - Atribuição da primeira fase do Projeto de PI assim como a definição de grupos e brainstorming inicial.
 
 04/09 - Foi decidido o sistema a ser desenvolvido em conjunto com a cliente escolhida.
 
-29/09 - Repositório criado no Github assim como os primeiros esboços que servirá como uma visão inicial do projeto prático. Também foi realizado a atribuição de responsabilidades em diferentes áreas do projeto como html, css e suas respectivas páginas. Com a organização estruturada foi criado no Figma o conceito visual do site, foi então decidido que o conceito será usado como base para o desenvolvimento da estrutura do site.
+29/09 - Repositório criado no Github assim como os primeiros esboços que servirá como uma visão inicial do projeto prático.
+Também foi realizado a atribuição de responsabilidades em diferentes áreas do projeto como html, css e suas respectivas páginas.
+Com a organização estruturada foi criado no Figma o conceito visual do site, foi então decidido que o conceito será usado como base para o desenvolvimento da estrutura do site.
 
-03/10 - Foi realizado progresso na parte de front-end de produtos do site assim como o primeiro feedback criativo e adaptação de ideias. Foi aprovado pela cliente o conceito visual da landing page sendo então usado como base adiante no desenvolvimento do projeto, em conjunto com o desenvolvimento de padrões do css e a versão inicial do header e hero da página inicial.
+03/10 - Foi realizado progresso na parte de front-end de produtos do site assim como o primeiro feedback criativo e adaptação de ideias.
+Foi aprovado pela cliente o conceito visual da landing page sendo então usado como base adiante no desenvolvimento do projeto, 
+em conjunto com o desenvolvimento de padrões do css e a versão inicial do header e hero da página inicial.
 
-04/10 - Primeiro commit do projeto no Github, sendo o Indexhtml. Também foi realizado o desenvolvimento da ferramenta de carrossel de imagens através de JavaScript. Cliente levantou questões em relação a valor de hospedagem/domínio e dúvidas em relação ao processo de adicionar produtos.
+04/10 - Primeiro commit do projeto no Github, sendo o Indexhtml. 
+Também foi realizado o desenvolvimento da ferramenta de carrossel de imagens através de JavaScript. 
+Cliente levantou questões em relação a valor de hospedagem/domínio e dúvidas em relação ao processo de adicionar produtos.
 
 05/10 - Foi finalizado a primeira versão funcional do html da parte de Produtos do site.
 
@@ -16,7 +24,8 @@
 
 12/10 - Perda de um membro do grupo que teve que trancar a matéria. Porém, voluntariamente decidiu que continuará contribuindo sua parte.
 
-17/10 - Foi realizado uma entrevista com a cliente, que ajudou a catalogar os diferentes produtos e as categorias que lhe pertencem. Também foi decidido que a área administrativa terá uma página de login
+17/10 - Foi realizado uma entrevista com a cliente, que ajudou a catalogar os diferentes produtos e as categorias que lhe pertencem. 
+Também foi decidido que a área administrativa terá uma página de login
 
 26/10 - Em luz das aulas de PhP, o grupo se preparou para adaptar as mudanças necessárias.
 
@@ -26,7 +35,7 @@
 
 05/11 - A estrutura PhP está pronta para implementação seguindo o término do css.
 
-07/11 - Avanço no desenvolvimento de css geral do projeto / html foi levemente modificado para suportar as mudanças.
+07/11 - Avanço no desenvolvimento de css geral do projeto, html foi levemente modificado para suportar as mudanças.
 
 08/11 - Finalização do css da parte principal, update no javascript.
 
